@@ -59,15 +59,15 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
 <script>
     console.log('the script starts');
 
-    function regularFunction() {                          // 'regular' or synchronous function
-      let number = 0;
-      for(let i = 0; i < 1000000000; i++){
+    function synchronousFunction() {
+      let number = 1;
+      for(let i = 1; i < 10000; i++){
         number *= i;
-      }  
-      return number;
+        console.log('regular function complete', number);
+      }
     }
 
-    async function fetchPic() {                             // asynchronous function is defined by the async keyword
+    async function asynchronousFunction() {                 // asynchronous function is defined by the async keyword
         console.log('asynchronous download begins');
         try {                                               // error handling: try/catch/finally
             const response = await fetch('someAddress');    // starting data download, fetch returns an object of type 'response'
@@ -80,9 +80,8 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
         }
     };
 
-    const test = regularFunction();
-    console.log('regular function complete', test);   
-    fetchPic();
+    synchronousFunction();
+    asynchronousFunction();
 
     console.log('the script ends');
 </script>
@@ -91,7 +90,7 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
 The code should log to the console:
 ```text
 the script starts
-regular function complete
+regular function complete 999999999
 asynchronous download begins
 the script ends
 asynchronous download complete

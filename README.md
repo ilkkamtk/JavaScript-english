@@ -5,7 +5,7 @@
 0. [Javascript vs Python Syntax Cheatsheet](https://medium.com/geekculture/javascript-vs-python-syntax-cheatsheet-9bc7c59599c6)
 1. [Programming environment](ohjelmointiymparisto.md)
 2. [Interactive programs](vuorovaikutteiset_ohjelmat.md)
-3. [Choice and loops](valinta-toistorakenteet.md)
+3. [Conditional expressions and loops](valinta-toistorakenteet.md)
 4. [Arrays and functions](taulukot-funktiot.md)
 5. [BOM, DOM and events](BOM-DOM-event.md)
 6. [Open APIs and AJAX](apit-ajax.md)

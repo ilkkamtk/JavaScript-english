@@ -28,3 +28,5 @@
   * Events
   * Museums
   * etc...
+* https://www.programmableweb.com/content/search
+* https://www.avoindata.fi/en

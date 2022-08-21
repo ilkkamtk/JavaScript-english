@@ -1,5 +1,5 @@
 'use strict';
-// dokumentaatio:
+// documentation:
 // https://www.digitraffic.fi/meriliikenne/#/vessel-location-controller/vesselLocationsWithingRadiusFromPointUsingGET
 // https://www.digitraffic.fi/meriliikenne/#/vessel-metadata-controller/vesselMetadataByMssiUsingGET
 // https://www.digitraffic.fi/meriliikenne/
@@ -10,41 +10,41 @@ const radius = 30;
 const now = new Date();
 console.log(now);
 let from = now.toISOString();
-// from on APIlle liian tarkka aika, joten poistetaan sekunnit ja sekunnin osat. Lisätään sen jälkeen 00.000Z
+// from is too accurate value for the API so remove everything after seconds. After that add 00.000Z
 from = from.slice(0, -7) + '00.000Z';
 
-// näytetään kartta
+// show the map
 const map = L.map('map').setView([latitude, longitude], 11);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// haetaan alusten sijaintitiedot helsingin lähistöltä
+// fetch the locations of vessels near Helsinki
 fetch(`https://meri.digitraffic.fi/api/v1/locations/latitude/${latitude}/longitude/${longitude}/radius/${radius}/from/${from}`).
-then(function(vastaus) {
-  return vastaus.json();
+then(function(response) {
+  return response.json();
 }).
-then(function(sijainnit) {
-  L.geoJSON(sijainnit, {  // sijainnit on geoJSON featureita joten ne voi suoraan syöttää karttaan
-    onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 34
+then(function(locations) {
+  L.geoJSON(locations, {  // locations are geoJSON features
+    onEachFeature: onEachFeature,
   }).addTo(map);
 });
 
-// tämä funktio ajetaan jokaiselle featurelle
-function onEachFeature(sijainti, taso) {
-  console.log(taso);
-  taso.
+// make something happen on each geoJSON feature
+function onEachFeature(location, layer) {
+  console.log(layer);
+  layer.
   bindPopup().
   openPopup().
   on('popupopen', function(popup) {
-    // haetaan aluksen nimi vasta siinä vaiheessa, kun markkerin/tason popup aukeaa
+    // get the name of the vessel only when the popup opens
     fetch(
-        'https://meri.digitraffic.fi/api/v1/metadata/vessels/' + sijainti.mmsi).
-    then(function(vastaus) {
-      return vastaus.json();
+        'https://meri.digitraffic.fi/api/v1/metadata/vessels/' + location.mmsi).
+    then(function(response) {
+      return response.json();
     }).
-    then(function(metatiedot) {
-      taso._popup.setContent(`<p>${metatiedot.name}</p>`);
+    then(function(metadata) {
+      layer._popup.setContent(`<p>${metadata.name}</p>`);
     });
   })
 }

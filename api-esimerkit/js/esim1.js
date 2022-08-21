@@ -1,11 +1,11 @@
 'use strict';
 
-const apiOsoite = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+const apiAddress = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
-// haetaan pysakit koordiaattien avulla
-function haePysakitKoordinaateilla(crd, dist) {
-  // GraphQL haku
-  const haku = `{
+// fetch stops by coordinates
+function getStopsByCoordinates(crd, dist) {
+  // GraphQL query
+  const GQLQuery = `{
                   stopsByRadius(lat:${crd.latitude}, lon:${crd.longitude}, radius:${dist}) {
                     edges {
                       node {
@@ -28,29 +28,29 @@ function haePysakitKoordinaateilla(crd, dist) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({query: haku}), // GraphQL haku lisätään queryyn
+    body: JSON.stringify({query: GQLQuery}),
   };
 
-  // lähetetään haku
-  fetch(apiOsoite, fetchOptions).then(function(vastaus) {
-    return vastaus.json();
-  }).then(function(tulos) {
-    console.log(tulos);
+  // send query
+  fetch(apiAddress, fetchOptions).then(function(response) {
+    return response.json();
+  }).then(function(result) {
+    console.log(result);
 
-    // tulostetaan pysäkit
-    const pysakit = tulos.data.stopsByRadius.edges;
-    for (let i = 0; i < pysakit.length; i++) {
-      const nimi = pysakit[i].node.stop.name;
-      const kuvaus = pysakit[i].node.stop.desc;
-      const latitude = pysakit[i].node.stop.lat;
-      const longitude = pysakit[i].node.stop.lon;
-      const linjat = pysakit[i].node.stop.routes;
-      console.log(`<p>${nimi}, koordinaatit: ${latitude}, ${longitude}</p>`);
+    // print stops
+    const stops = tulos.data.stopsByRadius.edges;
+    for (let i = 0; i < stops.length; i++) {
+      const name = stops[i].node.stop.name;
+      const description = stops[i].node.stop.desc;
+      const latitude = stops[i].node.stop.lat;
+      const longitude = stops[i].node.stop.lon;
+      const routes = stops[i].node.stop.routes;
+      console.log(`<p>${name}, koordinaatit: ${latitude}, ${longitude}</p>`);
       document.getElementById(
-          'tulosta').innerHTML += `<p>
-                                              ${nimi}, ${kuvaus}, 
+          'print').innerHTML += `<p>
+                                              ${name}, ${description}, 
                                               koordinaatit: ${latitude}, ${longitude}, 
-                                              bussit: ${joinObj(linjat)}
+                                              bussit: ${joinObj(routes)}
                                             </p>`;
     }
   }).catch(function(e) {
@@ -58,14 +58,14 @@ function haePysakitKoordinaateilla(crd, dist) {
   });
 }
 
-// tällä funktiolla yhdistetään taulukko, jossa bussilinjojen tunnukset (shortName)
-function joinObj(taulukko) {
+// this function is used to join a table containing identifiers of the bus routes (shortName)
+function joinObj(array) {
   const out = [];
-  for (let i = 0; i < taulukko.length; i++) {
-    out.push(taulukko[i].shortName);
+  for (let i = 0; i < array.length; i++) {
+    out.push(array[i].shortName);
   }
   return out.join(', ');
 }
 
-// käynnistetään pysäkkien haku halutuista koordinaateista 500 metrin säteellä
-haePysakitKoordinaateilla({latitude: 60.22417, longitude: 24.7582}, 500)
+// start fetching bus stops from some coordinates with 500 meter radius
+getStopsByCoordinates({latitude: 60.22417, longitude: 24.7582}, 500)

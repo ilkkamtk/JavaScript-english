@@ -1,39 +1,39 @@
 'use strict';
-// näytetään kartta ja keskitetään johonkin (60.189,24.966)
+// show map and center it to some coordinates (60.189,24.966)
 const map = L.map('map').setView([60.189, 24.966], 11);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// haetaan helsingin parkkipaikat
-function haeParkkipaikka(sivu) {
-  fetch('https://pubapi.parkkiopas.fi/public/v1/parking_area/?page=' + sivu).
-      then(function(vastaus) {
-        if (vastaus.ok) {  // jos vastaus on OK, eli ollaan saatu vastaus,
-          return vastaus.json(); // mennään seuraavaan then-funktioon
+// fetch parking spots in helsinki
+function getParking(page) {
+  fetch('https://pubapi.parkkiopas.fi/public/v1/parking_area/?page=' + page).
+      then(function(response) {
+        if (response.ok) {  // if successful response...
+          return response.json(); // ... move on to next then()
         } else {
-          throw new Error('parkkikset haettu'); // jos vastaus ei ole OK, heitetään errori ja koodi siirtyy catch osaan.
+          throw new Error('all parking spots fetched'); // if unsuccesful, throw error to get to the catch.
         }
       }).
-      then(function(tulos) {
-        const parkkikset = tulos.features;
-        L.geoJSON(parkkikset, {  // parkkikset on geoJSON featureita joten ne voi suoraan syöttää karttaan
-          onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 35
+      then(function(result) {
+        const parkingSpots = tulos.result;
+        L.geoJSON(parkingSpots, {  // parking spots are geoJSON features, so they can be shown on the map as they are
+          onEachFeature: onEachFeature, // if you want to make something happen when spot is clicked... see row 35
         }).addTo(map);
-        sivu++; // kasvatetaan sivun arvoa, jotta saadaan haettua seuraava sivu
-        console.log('haettiin sivu', sivu);
-        haeParkkipaikka(sivu); // haetaan seuraava sivu kutsumalla funktiota itseään (rekursio)
+        page++; // increase page to get the next set of parking spots
+        console.log('fetched page', page);
+        getParking(page); // get the next set of sopts by calling the function itself (recursion)
       }).
       catch(function(error) {
         console.log(error.message);
       });
 }
 
-// käynnistetään parkkipaikkojen haku sivulta 1
-haeParkkipaikka(1);
+// start fetching the parking spots starting from page 1
+getParking(1);
 
-// tämä funktio ajetaan jokaiselle featurelle
+// this function is run on each feature
 function onEachFeature(feature, layer) {
   console.log(feature);
-  layer.bindPopup(`<h1>Mua klikattiin</h1><p>${feature.properties.capacity_estimate}</p>`);
+  layer.bindPopup(`<h1>I was clicked and I might have this many spots left: </h1><p>${feature.properties.capacity_estimate}</p>`);
 }

@@ -369,7 +369,7 @@ Although a recursive function seems inventive, it is often not the most efficien
 ## Arrow functions
 
 The examples on this page are written using the traditional `function` statement in JavaScript. The ES6 language specification provides an alternative, more compact way to write a function. Functions according to this notation are called arrow functions, or lambda functions.
-(The arrow functions also solve some of the inconveniences associated with the `this` keyword in the previous ES5 language version, but will not be discussed further here.)
+(The arrow functions also solve some inconveniences associated with the `this` keyword in the previous ES5 language version, but will not be discussed further here.)
 
 Let's write the quadratic calculating function in the previous exam this time as an arrow function:
 ```javascript

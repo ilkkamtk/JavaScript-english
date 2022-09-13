@@ -47,37 +47,32 @@ The size of the `numbers` array is obtained from the` numbers.length` expression
 
 ## Looping an array
 
-The next program will draw ten dice results.
-The results are displayed first for throws in the original order and then in reverse order.
+You can loop an array by using for statement and [array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 
 ```javascript
-        const num = 5;
-        const throws = [];
+    const names = ['Frank', 'Scott', 'Jasmine', 'Don'];
 
-        for (let i = 0; i < num; i++) {
-            const result = Math.floor(Math.random() * 6) + 1;
-            console.log('The result of throw ' + (i+1) + ' is: ' + result);
-            throws[i] = result;
-        }
-        console.log('Reversed:')
-        for (let i = num - 1; i >= 0; i--) {
-            console.log('The result of throw ' + (i+1) + ' is: ' + heitot[i]);
-        }
+    for (let i = 0; i < throws.length; i++) {
+        console.log(`Name: ${names[i]}`);
+    }
 ```
 
-Esimerkki tulosteesta:
+Example output:
 ```
-The result of throw 1 is: 6
-The result of throw 2 is: 3
-The result of throw 3 is: 4
-The result of throw 4 is: 3
-The result of throw 5 is: 2
-Reversed:
-The result of throw 5 is: 2
-The result of throw 4 is: 3
-The result of throw 3 is: 4
-The result of throw 2 is: 3
-The result of throw 1 is: 6
+Name: Frank
+Name: Scott
+Name: Jasmine
+Name: Don
+```
+
+You can also use [for...of statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) to do the loop:
+
+```javascript
+    const names = ['Frank', 'Scott', 'Jasmine', 'Don'];
+
+    for (let name of names) {
+      console.log(`Name: ${name}`);
+    }
 ```
 
 ## Array methods
@@ -91,6 +86,8 @@ Examples of these methods are:
 - `push(value)` adds the value at the end of the array, multiple values separated by commas
 - `includes(value)` checks whether the array contains the given value
 
+Prefer [array.push(value)](https://www.freecodecamp.org/news/javascript-append-to-array-a-js-guide-to-the-push-method-2/) over `array[] = value` for convenience when adding values to an array.
+
 Methods are called by first writing the name of the array variable, then point, and finally the name of the method.
 For example, a array called `numbers` is sorted by typing `numbers.sort()`.
 Note that the `sort()` method mentioned above sorts the array in alphabetical order and not in numerical order. In this case, for example, the values 100, 23 and 15 would be sorted in alphabetical order 100, 15, 23, which is usually not the order desired by the programmer. This can be fixed by typing the desired sort function in the `sort ()` method call. For example, the array `numbers` would be sorted in numerical order as follows:
@@ -98,6 +95,30 @@ Note that the `sort()` method mentioned above sorts the array in alphabetical or
 numbers.sort((a,b) => a-b);
 ```
 Above example uses so-called arrow function to write the sorting function; arrow functions will be explained later.
+
+# Object Literals
+Object Literal defines statically declared data structure. Object literal is simply a comma-separated list of name value pairs inside curly braces. These 'names' are called properties. Obect literal can be used similarly as e.g. a dictionary in Python. Typical object literal looks like this:
+```javascript
+const student = {
+  firstName: 'Greg',
+  lastName: 'Focker',
+  studentId: 234359,
+  phone: '040 5902123',
+}
+```
+
+To read the values from the object literal you use the dot syntax. Also bracket style syntax is supported:
+```javascript
+const greeting = `Hello, my name is ${student.firstName} ${student.lastName}`;
+const studentInfo = `student number: ${student['studentId']}, phone number: ${student['phone']}`
+```
+
+Object literals are dynamic, so you can add and remove properties at any point (even if you use const). This is called mutating the object.
+```javascript
+student.address = 'Schoolroad 7';  // adds 'address' property to previous example
+delete student.phone;              // deletes 'phone' propertt from previous example
+console.log(student);
+```
 
 # Functions
 

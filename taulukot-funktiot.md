@@ -169,7 +169,7 @@ Write a function call below the function definition:
 ```javascript
         greet('Hi', 4);
 ```
-Ohjelma tuottaa seuraavan tulosteen:
+The program produces the following output:
 ```
 Hi 1. time!
 Hi 2. time!
@@ -325,8 +325,6 @@ Note that the lottery number array was created inside the function. The referenc
 Recursion refers to a situation where a function calls itself, as a result of which the called function calls itself again, and so on. At some point, the deepening of the call stack ends and the recursion begins to unravel.
 
 Consider the factorial calculation as an example of a recursive program. Factorial refers to multiplication, in which the factors of multiplication are, in addition to the number, all smaller positive integers, each at a time. For example, the factorial of the number 5 is 120.
-
-Rekursiivinen factorial laskenta voidaan perustaa ajatukseen, että esimerkiksi numeron 5 factorial on 5 kertaa numeron 4 factorial.
 
 Thus, the number 5 factorial is calculated as necessary to find out the number 4 factorial, which in turn is 4 times the number 3 factorial and so on.
 

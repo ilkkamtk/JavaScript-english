@@ -174,11 +174,11 @@ Fetch is a promise-based way to make Ajax applications. Compared to the original
 
 <script>
     
-    fetch('pics.json')              // The download is started. The standard method is GET.
-    .then(function(vastaus){        // When the download is complete,
-      return vastaus.json();        // convert the loaded text JSON to a JavaScript object / array
+    fetch('pics.json')              // The download is started. The default method is GET.
+    .then(function(response){       // When the download is complete,
+      return response.json();       // convert the loaded text JSON to a JavaScript object / array
     }).then(function(json){         // Then the downloaded data is received and
-      showPics(json);                // call the showPic function and send the loaded data to it as a parameter.
+      showPics(json);               // call the showPics function and send the loaded data to it as an argument.
     }).catch(function(error){       // If an error occurs,
       console.log(error);           // log the error to the console.
     });                
@@ -205,15 +205,15 @@ The ES8 version of JavaScript introduced the syntax of [async / await] (https://
     async function showPics() {  
         try{
            const response = await fetch('pics.json');              // The download is started.
-           if (!vastaus.ok) throw new Error('jokin meni pieleen'); // If an error occurs, an error message is thrown
-           const kuvat = await vastaus.json();                     // convert the loaded text JSON to a JavaScript object / array
-            const name = images[1].name;     // the 'name' property of the second object in the 'images' array
-            const description = images[1].description; // 'description' property of the second object object in the 'images' array
-            const address = images[1].address; // 'address' property of the second object object in the 'images' array
+           if (!response.ok) throw new Error('Invalid server input!'); // If an error occurs, an error message is thrown
+           const images = await response.json();                     // convert the loaded text JSON to a JavaScript object / array
+           const name = images[1].name;     // the 'name' property of the second object in the 'images' array
+           const description = images[1].description; // 'description' property of the second object object in the 'images' array
+           const address = images[1].address; // 'address' property of the second object object in the 'images' array
 
-            document.querySelector('img').src = address;
-            document.querySelector('img').alt = name;
-            document.querySelector('figcaption').innerText = description;
+           document.querySelector('img').src = address;
+           document.querySelector('img').alt = name;
+           document.querySelector('figcaption').innerText = description;
         } catch (error) {                                          // catch the thrown error message
           console.log(error.message)
         }                  

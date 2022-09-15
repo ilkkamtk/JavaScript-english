@@ -252,6 +252,9 @@ Alternatively, the substrings and the concatenated string could be stored in the
         console.log(all);
 ```       
 
+## Template strings (Template literals)
+Template literals are literals delimited with backtick (```) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
+
 ## Feed reading
 In the previous examples, the printouts produced by the programs were always the same, and the user could not influence their content in any way.
 

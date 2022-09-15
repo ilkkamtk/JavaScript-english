@@ -253,7 +253,7 @@ Alternatively, the substrings and the concatenated string could be stored in the
 ```       
 
 ## Template strings (Template literals)
-Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
+Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings and for string interpolation with embedded expressions (and for special constructs called tagged templates which is not covered here).
 ```javascript
 const someText = `Here is some multiline text.
 Here is the second line`;

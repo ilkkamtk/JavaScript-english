@@ -254,6 +254,15 @@ Alternatively, the substrings and the concatenated string could be stored in the
 
 ## Template strings (Template literals)
 Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
+```javascript
+const someText = `Here is some multiline text.
+Here is the second line`;
+```
+The formal name of template string is template literal. They are called template strings because they are used most commonly for string interpolation (to create strings by doing substitution of placeholders). Syntax is similar to Pythons f-string:
+```javascript
+const name = 'Mr. Skywalker';
+const greeting = `Hello ${name}`;
+```
 
 ## Feed reading
 In the previous examples, the printouts produced by the programs were always the same, and the user could not influence their content in any way.

@@ -387,4 +387,4 @@ The following program asks the user for two values of calories and converts them
 The use of designated constant `multiplier` in strict mode ensures that the correct value is used for both multiplications. If the conversion factors were written to the program code twice, it is possible that a typographical error would have occurred in the decimals of the second factor, which would result in a small but difficult-to-detect calculation error in the final result.
 
 ### The use of designated constants in JavaScript vs other languages
-Unlike many other languages, JavaScript tends to present almost all variables as named constants. So make it a habit to use the `const` keyword every time you create a new variable. You only need the `let` keyword when You want to change the value of a variable later.
+Unlike many other languages, JavaScript tends to present almost all variables as named constants. So make it a habit to use the `const` keyword every time you create a new variable. You only need the `let` keyword when the value of a variable needs to be changed later in the program.

@@ -96,7 +96,8 @@ numbers.sort((a,b) => a-b);
 ```
 Above example uses so-called arrow function to write the sorting function; arrow functions will be explained later.
 
-# Object Literals
+### Object literals
+
 Object Literal defines statically declared data structure. Object literal is simply a comma-separated list of name value pairs inside curly braces. These 'names' are called properties. Obect literal can be used similarly as e.g. a dictionary in Python. Typical object literal looks like this:
 ```javascript
 const student = {
@@ -107,7 +108,7 @@ const student = {
 }
 ```
 
-To read the values from the object literal you use the dot syntax. Also bracket style syntax is supported:
+Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstname` or `student["firstname"] `.
 ```javascript
 const greeting = `Hello, my name is ${student.firstName} ${student.lastName}`;
 const studentInfo = `student number: ${student['studentId']}, phone number: ${student['phone']}`
@@ -119,6 +120,31 @@ student.address = 'Schoolroad 7';  // adds 'address' property to previous exampl
 delete student.phone;              // deletes 'phone' propertt from previous example
 console.log(student);
 ```
+
+The property key can also be stored in a variable. The following code prints the student's last name:
+
+```javascript
+const chosenProperty = "lastName";
+console.log(student[chosenProperty]);
+``` 
+
+The definition of an object literal can also contain functions. The example below creates an object for which the remaining number of credits required for the degree is calculated using a function. Finally, that credit is printed.
+
+```javascript
+let student2 = {
+      firstName: 'Ahmed',
+      lastName: 'Hussein',
+      credits :175,
+      hasLeft: function() {return 240-this.credits}
+    }
+
+    console.log("Student " + student2.firstName + " is missing " + student2.hasLeft() + " credits.");
+```
+
+Functions are discussed in detail below.
+
+The above object literals were used as a data structure in which several related values can be stored "behind" a single variable name.
+Although object features are not covered here, JavaScript is a full-blooded object-oriented programming language that allows you to define classes with their constructors and methods. Objects can be created with the `new` statement, and classes can be defined as subclasses of other classes from the ES6 language version in much the same way as in the Java programming language.
 
 # Functions
 

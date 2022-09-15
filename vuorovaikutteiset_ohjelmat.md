@@ -11,6 +11,50 @@ An example of this is a program where the user enters two numbers and the progra
 the sum of those numbers. The user gives two inputs: the first and the second number (step 1), the program calculates the
 sum (step 2) and the program prints the sum (step 3).
 
+## Adding JavaScript to HTML documents
+You can add JavaScript into HTML by using the `<script>` element in two ways: inline or external file:
+
+#### Inline: 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+    <h1>Example</h1>
+    <script>
+        'use strict';
+        console.log('This is text is printed to the console.');
+    </script>
+</body>
+</html>
+```
+
+#### External file:
+example.js:
+```javascript
+  'use strict';
+  console.log('This is text is printed to the console.');
+```
+example.html
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+    <script src="example.js" defer></script>
+</head>
+<body>
+    <h1>Example</h1>
+</body>
+</html>
+```
+
+Using external JavaScript files is the preferred method, because it makes maintaining code easier in real life projects. Note the `defer` attrubute in the ´<script>´ element. Defer specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing. This means that scripts are executed after all the HTML elements of the document are ready. If the HTML elements are not there, obviously JavaScript cannot manipulate them and the app does not work. Before `defer` attribute existed, the same was achieved by placing the `<script>` elements to the end of the document right before ´</body>´ closing tag.
+
 ## Printing
 
 Let’s start with a simple program that produces a printout for the user.
@@ -207,51 +251,6 @@ Alternatively, the substrings and the concatenated string could be stored in the
         all = first + second + third;
         console.log(all);
 ```       
-
-### Object literals
-
-The object literal defines a set of properties to be represented by key-value pairs that can be handled by a single variable.
-
-For example, a student has a first name, last name, and a number of credits. We can create such a student using an object literal as follows:
-```javascript
-const student = {
-      firstName: 'Winona',
-      lastName: 'Wonka',
-      credits :80
-    };
-```
-
-Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstname` or `student["firstname"] `. The following method is used in the following:
-
-```javascript
-console.log('Student ' + student.firstname + ' is missing ' +
-        (240-student.credits) + ' credits.');
-```
-
-The property key can also be stored in a variable. The following code prints the student's last name:
-
-```javascript
-const chosenProperty = "lastName";
-console.log(student[chosenProperty]);
-``` 
-
-The definition of an object literal can also contain functions. The example below creates an object for which the remaining number of credits required for the degree is calculated using a function. Finally, that credit is printed.
-
-```javascript
-let student2 = {
-      firstName: 'Ahmed',
-      lastName: 'Hussein',
-      credits :175,
-      hasLeft: function() {return 240-this.credits}
-    }
-
-    console.log("Student " + student2.firstName + " is missing " + student2.hasLeft() + " credits.");
-```
-
-Functions are discussed in detail later.
-
-The above object literals were used as a data structure in which several related values can be stored "behind" a single variable name.
-Although object features are not covered here, JavaScript is a full-blooded object-oriented programming language that allows you to define classes with their constructors and methods. Objects can be created with the `new` statement, and classes can be defined as subclasses of other classes from the ES6 language version in much the same way as in the Java programming language.
 
 ## Feed reading
 In the previous examples, the printouts produced by the programs were always the same, and the user could not influence their content in any way.

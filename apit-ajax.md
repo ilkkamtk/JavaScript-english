@@ -1,7 +1,7 @@
 # Open application programming interfaces
 ## Application programming interface, API
 Application programming interface is a definition according to which different programs can make requests and exchange information, i.e. talk to each other.
-The API is kind of an interpreter between two different systems. For example, the JavaScript [Geolocation API] (https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) retrieves device location information from the operating system and translates it into a format suiarray for JavaScript.
+The API is kind of an interpreter between two different systems. For example, the JavaScript [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) retrieves device location information from the operating system and translates it into a format suiarray for JavaScript.
 
 ## Open application programming interface
 [Watch this video](https://www.youtube.com/watch?v=dStT9v5y6Tc)

@@ -237,7 +237,7 @@ Make an app that retrieves information about a TV series you enter and displays 
 * Add a click event to the search button that launches the search.
 * To search, you need to get the value of the 'query' field, which is then sent to the API using fetch.
 * There are likely to be more TV series in the search result, so make a for loop for printing the HTML needed to display the data
-* Data in some series may be missing, for example, an image. In this case, the value of that field is _null_. This will cause an error message and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+* Data in some series may be missing, for example, an image. In this case, the value of that field is _null_. This will cause an error message and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
     * You can try this with the keyword 'Dome', for example. It returns 9 TV series from the API, but one of them is missing a picture.
 * Grading:
   * HTML not valid: 1p deduction for each error

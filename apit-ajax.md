@@ -165,7 +165,7 @@ The example above describes an array (square brackets []) that contains two obje
 ```
 
 ## [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object] (https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. Same image search example as before, now implemented with the older syntax of fetch() function:
+Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. Same image search example as before, now implemented with the older syntax of fetch() function:
 ```html
 <figure>
     <img>
@@ -194,7 +194,7 @@ Fetch is a promise-based way to make Ajax applications. Compared to the original
      }
 </script>
 ```
-The ES8 version of JavaScript introduced the syntax of [async / await] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) error handling.
+The ES8 version of JavaScript introduced the syntax of [async / await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) error handling.
 ```html
 <figure>
     <img>
@@ -225,7 +225,7 @@ The ES8 version of JavaScript introduced the syntax of [async / await] (https://
 
 ## Assignment
 Make an app that retrieves information about a TV series you enter and displays it on a web page.
-* API to use: [TVMaze API] (http://www.tvmaze.com/api#show-search)
+* API to use: [TVMaze API](http://www.tvmaze.com/api#show-search)
 * Requirements:
     * Step 1: Print the search result to the console (3p)
     * Step 2: Print one set of search results on a web page (4p)
@@ -239,3 +239,10 @@ Make an app that retrieves information about a TV series you enter and displays 
 * There are likely to be more TV series in the search result, so make a for loop for printing the HTML needed to display the data
 * Data in some series may be missing, for example, an image. In this case, the value of that field is _null_. This will cause an error message and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
     * You can try this with the keyword 'Dome', for example. It returns 9 TV series from the API, but one of them is missing a picture.
+* Grading:
+  * HTML not valid: 1p deduction for each error
+  * Default font: 1p deduction
+  * Bad contrast (poor choise of colors): 1p deduction
+  * No padding, margin, hard to read: 1p deduction for each
+  * No error handling (all results are not displayed): 4p deduction
+  * Missing information: 1p deduction for each

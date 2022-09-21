@@ -255,4 +255,4 @@ Make an app that retrieves information about a TV series you enter and displays 
   * Links not working: 1p deduction
   * Search results are not cleared when a new search is made: 1p deduction
   * Comma `,` between genres: 1p deduction
-  * Search form is no styled: 1-2p deduction
+  * Search form is not styled: 1-2p deduction

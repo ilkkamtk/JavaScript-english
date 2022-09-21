@@ -242,7 +242,7 @@ Make an app that retrieves information about a TV series you enter and displays 
 * Grading:
   * HTML not valid: 1p deduction for each error
   * Default font: 1p deduction
-  * Bad contrast (poor choise of colors): 1p deduction
+  * Bad contrast (poor choise of colors): 1 - 2p deduction
   * No padding, margin, hard to read: 1p deduction for each
   * No error handling (all results are not displayed): 4p deduction
   * Missing information: 1p deduction for each

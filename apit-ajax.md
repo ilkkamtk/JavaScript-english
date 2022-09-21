@@ -230,14 +230,18 @@ Make an app that retrieves information about a TV series you enter and displays 
     * Step 1: Print the search result to the console (3p)
     * Step 2: Print one set of search results on a web page (4p)
         * required information: Name, link to home page (officialSite), medium image and summary
+        * add the link to `<a>` element
     * Step 3: Print the same information for all series from the search result on the web page as above (7p)
         * in addition, the genres to which the series belongs are printed
+          * use `|` character (or similar, but no comma) to separate the genres  
+        * if TV series has no image, use default image
+        * if TV series has no officialSite, use url
     * Step 4: Stylish layout with CSS and valid HTML (6p)
 * First, make a valid HTML page with a search box. Example html for the form/search box: `<input id="query" type="text">` and `<button id ="searchButton">Search</button>`
 * Add a click event to the search button that launches the search.
 * To search, you need to get the value of the 'query' field, which is then sent to the API using fetch.
 * There are likely to be more TV series in the search result, so make a for loop for printing the HTML needed to display the data
-* Data in some series may be missing, for example, an image. In this case, the value of that field is _null_. This will cause an error message and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+* Data in some series may be missing, for example, the `image` object or the `officialSite` property . In this case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
     * You can try this with the keyword 'Dome', for example. It returns 9 TV series from the API, but one of them is missing a picture.
 * Grading:
   * HTML not valid: 1p deduction for each error
@@ -246,3 +250,7 @@ Make an app that retrieves information about a TV series you enter and displays 
   * No padding, margin, hard to read: 1p deduction for each
   * No error handling (all results are not displayed): 4p deduction
   * Missing information: 1p deduction for each
+  * No default image: 2p deduction
+  * Links not working: 1p deduction
+  * Search results are not cleared when a new search is made: 1p deduction
+  * Comma `,` between genres: 1p deduction

@@ -194,7 +194,7 @@ Fetch is a promise-based way to make Ajax applications. Compared to the original
      }
 </script>
 ```
-The ES8 version of JavaScript introduced the syntax of [async / await] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with error handling.
+The ES8 version of JavaScript introduced the syntax of [async / await] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) error handling.
 ```html
 <figure>
     <img>

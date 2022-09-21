@@ -50,7 +50,7 @@ Because the Ajax application dynamically modifies Web pages without the user hav
 
 ### A = Asynchronous
 Because the execution environment of JavaScript is single-threaded, time-consuming operations cannot be waited synchronously, i.e., so that a single thread waits for the execution of the call, in which case the program does nothing else.
-For this reason, in JavaScript, many things, such as AJAX calls and file processing, are done asynchronously, that is, the response is given as a parameter to the callback function instead of the return value of the function.
+For this reason, in JavaScript, many things, such as AJAX calls and file processing, are done asynchronously.
 
 #### Asynchronous AJAX-request
 ```html

@@ -237,6 +237,7 @@ Make an app that retrieves information about a TV series you enter and displays 
         * if TV series has no image, use default image
         * if TV series has no officialSite, use url
     * Step 4: Stylish layout with CSS and valid HTML (6p)
+      * you'll probably need at least 5-10 CSS rules to make a proper layout
 * First, make a valid HTML page with a search box. Example html for the form/search box: `<input id="query" type="text">` and `<button id ="searchButton">Search</button>`
 * Add a click event to the search button that launches the search.
 * To search, you need to get the value of the 'query' field, which is then sent to the API using fetch.
@@ -254,3 +255,4 @@ Make an app that retrieves information about a TV series you enter and displays 
   * Links not working: 1p deduction
   * Search results are not cleared when a new search is made: 1p deduction
   * Comma `,` between genres: 1p deduction
+  * Search form is no styled: 1-2p deduction

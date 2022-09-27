@@ -68,17 +68,6 @@ const interval = setInterval(sayHello, 1000);
 clearInterval(interval);
 ```
 
-## [document](https://developer.mozilla.org/en-US/docs/Web/API/Window/document)
-Belongs to both BOM and DOM standard
-More about the document object [below] ()
-## [history](https://developer.mozilla.org/fi/docs/Web/API/History)
-The `history` interface contains the history of the browser window, i.e. the pages visited in that browser window or tab.
-```javascript
-history.back(); // go back in history
-history.forward(); // go forward in history
-history.go(-2); // go back two steps in history
-```
-
 ## [navigator-interface](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
 The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) palauttaa laitteen gps-koordinaatit:
 ```html
@@ -125,33 +114,6 @@ The `navigator` interface can be used to retrieve information about the browser.
     navigator.geolocation.getCurrentPosition(success, error, options);
 </script>
 ```
-The Navigator interface also has [MediaDevices-interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), to use the device 's camera and / or microphone. E.g:
-```html
-<video autoplay></video>
-
-<script>
-    // Specify the desired video size.
-    const options = { video: { width: 1280, height: 720 } };
-
-    // A function that is run when an image is obtained from the camera
-    function success(mediaStream) {
-      // Select the video element
-      const video = document.querySelector('video');
-      // Sets the camera stream as the image source for the video element
-      video.srcObject = mediaStream;
-    }
-    
-    // Function to be called if an error occurs
-    function error(err) { 
-      console.warn(`ERROR(${err.name}): ${err.message}`); 
-    }
-    
-    // Turning on the camera
-    navigator.mediaDevices.getUserMedia(options).then(success).catch(error);
-</script>
-```
-
-In some cases, when you want to use the latest features of JavaScript, you need to check whether the user's browser supports this. feature. Although it is possible to [sniff](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) whether it is Chrome or Internet Explorer, a better way to check if the feature works is [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
 
 ## [location-interface](https://developer.mozilla.org/en-US/docs/Web/API/location)
 The `location` interface tells you the address information of the document. It is usually used to redirect the browser:
@@ -248,7 +210,7 @@ document.scripts // retrieves all script elements
     const second = document.querySelectorAll('li')[1];      // the same with querySelectorAll-function
     ```
 
-3. Iterate all `<li>` elements using the forEach function and make the text bold
+3. Iterate all `<li>` elements using the forEach function and make the text bold. ([forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) is a modern alternative to for...of)
    ```javascript
         const bullets = document.querySelectorAll('li');
         bullets.forEach(function (bullet) {
@@ -341,10 +303,8 @@ Edit the Class attribute:
 <p class="red" id="paragraph">Some text</p>
 
 <script>
-// Change to blue
-document.querySelector('#paragraph').setAttribute('class', 'blue');
-// Remove blue
-document.querySelector('#paragraph').classList.toggle('blue');
+// Toggle red on or off
+document.querySelector('#paragraph').classList.toggle('red');
 // Replace blue with red
 document.querySelector('#paragraph').classList.replace('red', 'blue');
 </script>
@@ -380,12 +340,13 @@ button.addEventListener('click', popup);
 ``` 
 Note that the popup function in addEventListener is missing parentheses This is because the popup function is used as an event handler and is not called immediately, but only when a 'click' occurs. If it had parentheses, the function would be started immediately.
 
-The event handler is also called a callback function.
+The event handler is also called a [callback function](#callback-functions-and-callback-hell).
 
-The event handler receives an [event object] (https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt) that contains information about the event, such as the type of event and its target. For example, `evt.currentTarget` returns the element that is the target of the event.
+The event handler receives an [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt) that contains information about the event, such as the type of event and its target. For example, `evt.currentTarget` returns the element that is the target of the event.
 In the example code above, this item is the `<button>` element.
 
-### [List of events](https://developer.mozilla.org/en-US/docs/Web/Events)
+### [Study this list of events](https://developer.mozilla.org/en-US/docs/Web/Events)
+Most important at this point are the mouse related events.
 
 ## Syntax
 Three different syntaxes can be used in event handling.

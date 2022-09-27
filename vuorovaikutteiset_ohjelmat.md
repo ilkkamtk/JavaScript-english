@@ -91,7 +91,8 @@ A pop-up message window is generated with the [`alert`](BOM-DOM-event.md#alert-m
         alert('Hi from here too!');
 ```
 
-Selainikkunaan ilmestyvä viesti-ikkuna näyttää tältä:
+The alert window that appears in the browser looks like this:
+
 ![viesti-ikkuna](img/viesti_ikkuna.png)
 
 ### Printing into a web page

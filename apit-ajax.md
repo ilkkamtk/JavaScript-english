@@ -285,7 +285,7 @@ Make an app that retrieves information about a TV series you enter and displays 
         * if TV series has no officialSite, use url
     * Step 4: Stylish layout with CSS and valid HTML (6p)
       * you'll probably need at least 5-10 CSS rules to make a proper layout
-* First, make a valid HTML page with a search form. Example html for the form/search box: 
+* First, make a valid HTML page with a search form. Example form: 
 ```html
 <form action="https://api.tvmaze.com/search/shows">
     <input id="query" name="q" type="text">

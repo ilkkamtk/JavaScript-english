@@ -509,7 +509,7 @@ document.addEventListener('submit', async function(evt) {
     }
     // send the data
    try {
-      const response = await fetch('/someAddressWhereDataIsSent', data);  // Send data to server and receive a response
+      const response = await fetch('/someAddressWhereDataIsSent', data);  // Send data to server and receive a server response
       if (!response.ok) throw new Error('Invalid server input!');         // If an error occurs, an error message is thrown
       const json = await response.json();                                 // convert the loaded text JSON to a JavaScript object / array
       console.log('result', json);                                        // print the result to the console
@@ -519,6 +519,8 @@ document.addEventListener('submit', async function(evt) {
 });
 </script>
 ```
+`fetch()` and `json()` functions both return a promise. Hence, you need use the await keyword to wait for the promise to be fulfilled. In this case that means that the data has been loaded.
+
 
 ### Callback functions and callback hell
 _(Extra)_

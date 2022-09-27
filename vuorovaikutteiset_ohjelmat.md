@@ -194,7 +194,7 @@ Pekka
 
 Two types of variables were discussed above: integers and strings.
 There are six primitive types of variables in JavaScript:
-- boolean type, which can be `true` or` false`
+- boolean type, which can be `true` or `false`
 - a numeric type that can contain an integer or a floating point number.
 - string
 - `null`, which indicates that the value is empty.
@@ -351,7 +351,7 @@ Many mathematical operations - such as calculating a cosine or taking the square
 There is no need to memorize the methods provided by the Math object.When you type code in the IDE (for example, WebStorm) and enter the word `Math` after typing a period, the IDE provides a list of available methods and constants. You can also see from the list what arguments must be given for each of the methods; for example, the square root method `sqrt` requires an argument to be rooted, while the random random method does not require arguments,
 You can also get acquainted with the available methods through the official JavaScript specification: <http://www.ecma-international.org/ecma-262/6.0/> (Chapter 20.2) or you can use one of the numerous JavaScript sources and teaching materials on the Internet.
 
-## Automatic setting of variables
+## Prevent automatic setting of variables
 JavaScript programs run by default in the so-called in sloppy mode, where it is not mandatory to specify variables with the word `let` or `const`. In this case, a global (i.e., program-wide) variable is automatically defined each time the programmer places a value in the variable for the first time.
 
 For example, the following program could run seemingly successfully:
@@ -362,7 +362,7 @@ For example, the following program could run seemingly successfully:
 ```
 
 However, the program prints zero as the diameter; this is due to a typo in the variable name by the programmer.
-The program initially creates a variable called `diameter` defined by the` let` statement. However, the second line places the value in a variable with a different name, accidentally misspelled `diametr`. In this case, another variable is automatically created.
+The program initially creates a variable called `diameter` defined by the`let` statement. However, the second line places the value in a variable with a different name, accidentally misspelled `diametr`. In this case, another variable is automatically created.
 Eventually, the program has two different variables, and the program prints a diameter of zero due to the fact that the correct value `2340` was placed in the wrong variable. Instead, the value of the correctly spelled variable defined by the `let` statement had remained at zero.
 
 Situations such as those described create semantic errors that are difficult to find, in which the execution of the program does not crash with an error message, but instead the program malfunctions.

@@ -138,7 +138,7 @@ let student2 = {
       hasLeft: function() {return 240-this.credits}
     }
 
-    console.log("Student " + student2.firstName + " is missing " + student2.hasLeft() + " credits.");
+console.log("Student " + student2.firstName + " is missing " + student2.hasLeft() + " credits.");
 ```
 
 Functions are discussed in detail below.

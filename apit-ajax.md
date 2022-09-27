@@ -164,6 +164,53 @@ The example above describes an array (square brackets []) that contains two obje
 </script>
 ```
 
+
+## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
+![Promise flowchart](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png)
+
+In newer versions of JavaScript, promise is increasingly used instead of [callback functions](#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
+The advantages of the promise are e.g. simpler syntax and easier error handling. For example, to submit a form using the fetch method:
+```html
+<form>
+  <div>
+    <input name="fName" type="text" placeholder="first name">
+  </div>
+  <div>
+    <input name="lName" type="text" placeholder="last name">
+  </div>
+  <div>
+    <input name="submit" type="submit" value="Send">
+  </div>
+</form>
+<script>
+// When the form is submitted...
+document.addEventListener('submit', async function(evt) {
+    // ... prevent the default action.
+    evt.preventDefault();
+    // create an object 'data' to which user input from the form is added and the http method is set to POST
+    const data = {
+        body: {
+            fname: document.querySelector('input[name=fName]').value,
+            lname: document.querySelector('input[name=lName]').value
+        },
+        method: 'POST'
+    }
+    // send the data
+   try {
+      const response = await fetch('/someAddressWhereDataIsSent', data);  // Send data to server and receive a server response
+      if (!response.ok) throw new Error('Invalid server input!');         // If an error occurs, an error message is thrown
+      const json = await response.json();                                 // convert the loaded text JSON to a JavaScript object / array
+      console.log('result', json);                                        // print the result to the console
+   } catch (e) {
+      console.log('error', e);
+   }
+});
+</script>
+```
+`fetch()` and `json()` functions both return a promise. Hence, you need use the await keyword to wait for the promise to be fulfilled. In this case that means that the data has been loaded.
+
+
 ## [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. Same image search example as before, now implemented with the older syntax of fetch() function:
 ```html

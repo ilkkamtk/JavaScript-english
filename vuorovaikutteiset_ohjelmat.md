@@ -161,7 +161,7 @@ The above variable can be initialized as follows:
 ```
 
 
-The variable could also be defined and initialized at the same time:
+The variable could also be defined and initialized at the same time, which is actually more common:
 ```javascript
         const name = 'Myles';
 ```

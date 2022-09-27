@@ -285,9 +285,17 @@ Make an app that retrieves information about a TV series you enter and displays 
         * if TV series has no officialSite, use url
     * Step 4: Stylish layout with CSS and valid HTML (6p)
       * you'll probably need at least 5-10 CSS rules to make a proper layout
-* First, make a valid HTML page with a search box. Example html for the form/search box: `<input id="query" type="text">` and `<button id ="searchButton">Search</button>`
+* First, make a valid HTML page with a search form. Example html for the form/search box: 
+```html
+<form action="https://api.tvmaze.com/search/shows">
+    <input id="query" name="q" type="text">
+    <input type="submit" value="Search">
+</form>
+```
+* Test the form. The result should be a page full of JSON formatted data.
+* Add JavaScript file.
 * Add a click event to the search button that launches the search.
-* To search, you need to get the value of the 'query' field, which is then sent to the API using fetch.
+* To search, you need to get the value of the 'q' field, which is then sent to the API using fetch.
 * There are likely to be more TV series in the search result, so make a for loop for printing the HTML needed to display the data
 * Data in some series may be missing, for example, the `image` object or the `officialSite` property . In this case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
     * You can try this with the keyword 'Dome', for example. It returns 9 TV series from the API, but one of them is missing a picture.

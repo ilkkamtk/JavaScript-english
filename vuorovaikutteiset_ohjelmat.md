@@ -131,7 +131,7 @@ From now on, the examples use mostly the console printing option, the `console.l
 
 Strings printed above such as `Howdy, partner!` are examples of string literals.
 A literal refers to a value that is written in the program code as it is, i.e. they are hard coded.
-String literals are always enclosed in quotation marks. In JavaScript it is a common practice to use single quotes.
+String literals are always enclosed in quotation marks. In JavaScript, it is a common practice to use single quotes.
 
 Examples of string literals:
 - `'Metropolia'`
@@ -145,8 +145,8 @@ In this case, the interpreter can handle it correctly, for example when asked to
 The values required by the program can be stored in variables.
 The values stored in the variable can be read many times during the program, and the values set once can be changed.
 
-JavaScript variables are defined by a `const`,` let`, or `var` statement. The choice of a keyword affects the visibility of the variable: whether the variable appears at the code block or function level.
-These programming language structures are discussed later; at this point, it is enough to learn how to define variables using the `const` and 'let' keywords.
+JavaScript's variables are defined by a `const`, `let`, or `var` statement. The choice of a keyword affects the visibility of the variable: whether the variable appears at the code block or function level.
+These programming language structures are discussed later; at this point, it is enough to learn how to define variables using the `const` and `let` keywords.
 
 For example, a variable called `name` is defined as follows:
 ```javascript

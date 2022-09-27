@@ -97,7 +97,7 @@ The alert window that appears in the browser looks like this:
 
 ### Printing into a web page
 
-A JavaScript program can print HTML content as part of a web page using [dom methods](BOM-DOM-event.md##dom---document-object-model). For example, the following HTML page contains a JavaScript section that programmatically prints the contents of a paragraph element (`<p id="target"></p>`):
+A JavaScript program can print HTML content as part of a web page using [dom methods](BOM-DOM-event.md##dom---document-object-model). For example, the following HTML page contains a JavaScript section that programmatically prints content into a paragraph element (`<p id="target"></p>`):
 
 ```html
 <!DOCTYPE html>

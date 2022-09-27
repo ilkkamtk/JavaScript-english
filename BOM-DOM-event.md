@@ -417,7 +417,7 @@ button.onclick = popup;
 </script>
 ```
 ### Modern (present)
-[addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) function method is recommended for slightly wider applications. It can be used to add more than one event handler to the same event, or the event can be canceled at different stages of the application as needed using the [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) function.
+[addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) function method is recommended for most applications. It can be used to add more than one event handler to the same event, or the event can be canceled at different stages of the application as needed using the [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) function.
 Such a function may be required, for example, when you want the first click of a button to perform function A and the second click to perform function B:
 ```html
 <button>Click me</button>
@@ -477,7 +477,7 @@ form.addEventListener('submit', function(evt) {
 ```
 
 ## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-In newer versions of JavaScript, promise is increasingly used instead of callback functions. A promise is an object that ‘promises’ to return value.
+In newer versions of JavaScript, promise is increasingly used instead of [callback functions](#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
 The advantages of the promise are e.g. simpler syntax and easier error handling. For example, to submit a form using the fetch method:
 ```html
 <form>
@@ -493,7 +493,7 @@ The advantages of the promise are e.g. simpler syntax and easier error handling.
 </form>
 <script>
 // When the form is submitted...
-form.onsubmit = function(evt) {
+document.addEventListener('submit', async function(evt) {
     // ... prevent the default action.
     evt.preventDefault();
     // create an object 'data' to which user input from the form is added and the http method is set to POST
@@ -505,12 +505,53 @@ form.onsubmit = function(evt) {
         method: 'POST'
     }
     // send the data
-    fetch('someAddressWhereDataIsSent.php', data)
-    .then( function(response) {  // When the server response is received
-        console.log(response);   // do something with the response.
-    }).catch( function(err) {  // In the event of an error, the error is catched
-        console.log(err);     // and printed.
-    });
-}
+   try {
+      const response = await fetch('/someAddressWhereDataIsSent', data);  // Send data to server and receive a response
+      if (!response.ok) throw new Error('Invalid server input!');         // If an error occurs, an error message is thrown
+      const json = await response.json();                                 // convert the loaded text JSON to a JavaScript object / array
+      console.log('result', json);                                        // print the result to the console
+   } catch (e) {
+      console.log('error', e);
+   }
+});
 </script>
+```
+
+### Callback functions and callback hell
+_(Extra)_
+
+Callbacks are functions passed as an argument to another function to be executed once an event has occurred or a certain task is complete, often used in asynchronous code. Callback functions are invoked later by a piece of code but can be declared on initialization without being invoked.
+
+As an example, event listeners are asynchronous callbacks that are only executed when a specific event occurs.
+```javascript
+function clickaHandler() {
+  console.log('The user clicked on the page.');
+}
+document.addEventListener('click', clickaHandler);
+```
+#### Callback hell
+Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+```javascript
+getData(function(a) {
+  getMoreData(a, function(b) {
+    getMoreData(b, function(c) {
+      getMoreData(c, function(d) {
+        getMoreData(d, function(e) {
+          // ...
+        })
+      })
+    })
+  })
+})
+```
+Refactoring the functions to return promises and using async/await can sometimes be a solution.
+```javascript
+async function asyncAwaitVersion() {
+  const a = await getData()
+  const b = await getMoreData(a)
+  const c = await getMoreData(b)
+  const d = await getMoreData(c)
+  const e = await getMoreData(d)
+  // ...
+}
 ```

@@ -69,7 +69,7 @@ clearInterval(interval);
 ```
 
 ## [navigator-interface](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
-The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) palauttaa laitteen gps-koordinaatit:
+The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) returns the gps coordinates of the device:
 ```html
 <!-- retrieving the user's location information and displaying it using OpenStreetMap and Leaflet.js -->
 <div id="map" style="width: 100%; height: 400px;"></div>

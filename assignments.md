@@ -38,5 +38,39 @@ You can choose which tasks you want to do. However, the maximum score for each m
 
 
 ## Module 2. Arrays and functions
+1. Write a program that prompts the user for five numbers and prints them in the reverse order they were entered. Print the result to the console.(2p)
+   * Save the numbers to an array, then use for-loop to iterate in reverse order. 
+   * Do not use array.reverse() function.
+2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in a numbered list (`<ol>`) in the same order as they were entered. (3p)
+3. Write a program that prompts the user for numbers. When the user enters one of the numbers he previously entered, the program will announce that the number has already been given and stops its operation and then prints all the given numbers to the console in ascending order. (3p)
+4. Write a function called append(), which receives an array of strings as a parameter. The function returns a string formed by concatenating the elements of the array. (2p)
+   * Example: In a four-item array, there are items Johnny, DeeDee, Joey and Marky. The function returns the string JohnnyDeeDeeJoeyMarky.
+   * Do not use array.join() function
+   * You can hard code the array, no need for prompt().
+5. Write a function called even(), which receives an array containing numbers as a parameter. The function returns a second (usually smaller) array which has the even numbers of the original array. The function must not make changes to the original table. (3p)
+   * Example: In a three-item array, there are items 2, 7 and 4. The function returns a two-item array with items 2 and 4.
+   * Print both the original array and the new array to the console in the main program after you have called the function.
+6. Write a voting program as described below for small-scale meeting use. (8p)
+   * The program asks for the number of candidates. 
+   * Then the program asks for the names of the candidates: `'Name for candidate 1`
+   * ...and prints the candidates and initial vote count to the console:
+   ```text
+   {
+      ellie: 0,
+      frank: 0,
+      pamela: 0
+   }
+   ```
+   * The program asks for the number of voters.
+   * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
+   * The program announces the name of the winner and the results by printing it to the console:
+   ```text
+   The winner is Pamela by 4 votes.
+   results:
+   pamela: 3 votes
+   frank: 1 votes
+   ellie: 1 votes
+   ```
+   * Some help: [How to sort objects in JavaScript](https://medium.com/@gmcharmy/sort-objects-in-javascript-e-c-how-to-get-sorted-values-from-an-object-142a9ae7157c)
 
 ## Module 3. BOM, DOM and events

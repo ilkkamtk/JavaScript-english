@@ -65,7 +65,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
    * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
    * The program announces the name of the winner and the results by printing it to the console:
    ```text
-   The winner is Pamela by 4 votes.
+   The winner is pamela by 4 votes.
    results:
    pamela: 3 votes
    frank: 1 votes
@@ -74,3 +74,48 @@ You can choose which tasks you want to do. However, the maximum score for each m
    * Some help: [How to sort objects in JavaScript](https://medium.com/@gmcharmy/sort-objects-in-javascript-e-c-how-to-get-sorted-values-from-an-object-142a9ae7157c)
 
 ## Module 3. BOM, DOM and events
+Download this ZIP-file, extract it and move the content to the folder where you have your other files for this course.
+1. Open `t1` folder in your IDE/editor. Add HTML by using innerHTML property (2p)
+   * Add the following HTML code to the element with `id="target"`
+   ```html
+   <li>First item</li>
+   <li>Second item</li>
+   <li>Third item</li>
+   ```
+   * Add class `my-list` to the element with `id="target"`
+2. Open `t2` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (2p)
+   * Add the following HTML code to the element with `id="target"`
+   ```html
+   <li>First item</li>
+   <li>Second item</li>
+   <li>Third item</li>
+   ```
+   * Add class `my-item` to the second list item
+3. Open `t3` folder in your IDE/editor. Add HTML by using innerHTML property. (2p)
+   * Add the following HTML code to the element with `id="target"`. Add the values from 'names' array to the `<li>` elements in a for-loop.
+   ```html
+   <li>John</li>
+   <li>Paul</li>
+   <li>Jones</li>
+   ```
+4. Open `t4` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (2p)
+   * Add the following HTML code to the element with `id="target"`. Add the values from 'students' object to the `<option>` elements in a for-loop.
+   ```html
+   <option value="2345768">John</option>
+   <option value="2134657">Paul</option>
+   <option value="5423679">Jones</option>
+   ```
+5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image catption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element.
+   * The structure of the articles should be this:
+   ```html
+   <article class="card">
+      <h2>title_from_picArray</h2>
+      <figure>
+         <img src="X_from_picArray" alt="title_from_picArray">
+         <figcaption>Y_from_picarray</figcaption>
+      </figure>
+      <p>description_from_picArray</p>
+   </article>
+   ```
+6. Open `t6` folder in your IDE/editor. Make a script that opens an alert window that says 'Button Clicked' when the `<button>` element is clicked. (1p)
+7. 

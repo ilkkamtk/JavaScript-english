@@ -123,8 +123,11 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    * when user mouses off, change the picture back to original
 8. Open `t8` folder in your IDE/editor. Make a simple calculator. (4p)
    * There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
-9. Continue previous task. Edit the previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division)
-   * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods as well as the [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch). (3p)
+9. Continue previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division) (3p)
+   * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods as well as the [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
+   * eval() function is prohibited
+   * No need to support decimal numbers, calculating integers is enough.
+   * Example inputs: `3+5`, `2*78`, `3/6`, etc..
 11. Continue task 5. 
 
 

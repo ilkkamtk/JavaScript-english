@@ -422,7 +422,6 @@ For example, HTML forms work by having a user fill out a form, after which they 
 const form = document.querySelector('form');
 const fname = document.querySelector('input[name=fName]');
 const lname = document.querySelector('input[name=lName]');
-const submit = document.querySelector('input[name=submit]');
 const p = document.querySelector('p');
 
 // When the form is submitted...

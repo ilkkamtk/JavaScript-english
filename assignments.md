@@ -105,7 +105,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    <option value="2134657">Paul</option>
    <option value="5423679">Jones</option>
    ```
-5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image catption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element.
+5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image catption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element. (5p)
    * The structure of the articles should be this:
    ```html
    <article class="card">
@@ -118,4 +118,57 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    </article>
    ```
 6. Open `t6` folder in your IDE/editor. Make a script that opens an alert window that says 'Button Clicked' when the `<button>` element is clicked. (1p)
-7. 
+7. Open `t7` folder in your IDE/editor. Make a hover effect with JavaScript. (2p)
+   * when user mouses over `<p id="trigger">` change the picture of `<img id='target'>` form `picA.jpg` to `picB.jpg`
+   * when user mouses off, change the picture back to original
+8. Open `t8` folder in your IDE/editor. Make a simple calculator. (4p)
+   * There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
+9. Continue previous task. Edit the previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division)
+   * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods as well as the [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch). (3p)
+11. Continue task 5. 
+
+
+
+## Module 4. AJAX
+Make an app that retrieves information about a TV series you enter and displays it on a web page.
+* API to use: [TVMaze API](http://www.tvmaze.com/api#show-search)
+* Requirements:
+   * Step 1: Print the search result to the console (3p)
+   * Step 2: Print one set of search results on a web page (4p)
+      * required information: Name, link to home page (officialSite), medium image and summary
+      * add the link to `<a>` element
+   * Step 3: Print the same information for all series from the search result on the web page as above (7p)
+      * in addition, the genres to which the series belongs are printed
+         * use `|` character (or similar, but no comma) to separate the genres
+      * if TV series has no image, use default image
+         * example default image: https://via.placeholder.com/100x200?text=text+here
+      * if TV series has no officialSite, use url
+      * you can comment out steps 1 and 2 at this point
+   * Step 4: Stylish layout with CSS and valid HTML (6p)
+      * you'll probably need at least 5-10 CSS rules to make a proper layout
+* First, make a valid HTML page with a search form. Example form:
+```html
+<form action="https://api.tvmaze.com/search/shows">
+    <input id="query" name="q" type="text">
+    <input type="submit" value="Search">
+</form>
+```
+* Test the form. The result should be a page full of JSON formatted data.
+* Add JavaScript file.
+* Add a click event to the search button that launches the search.
+* To search, you need to get the value of the 'q' field, which is then sent to the API using fetch.
+* There are likely to be more TV series in the search result, so make a for loop for printing the HTML needed to display the data
+* Data in some series may be missing, for example, the `image` object or the `officialSite` property . In this case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+   * You can try this with the keyword 'Dome', for example. It returns 9 TV series from the API, but one of them is missing a picture.
+* Grading:
+   * HTML not valid: 1p deduction for each error
+   * Default font: 1p deduction
+   * Bad contrast (poor choise of colors): 1 - 2p deduction
+   * No padding, margin, hard to read: 1p deduction for each
+   * No error handling (all results are not displayed): 4p deduction
+   * Missing information: 1p deduction for each
+   * No default image: 2p deduction
+   * Links not working: 1p deduction
+   * Search results are not cleared when a new search is made: 1p deduction
+   * Comma `,` between genres: 1p deduction
+   * Search form is not styled: 1-2p deduction

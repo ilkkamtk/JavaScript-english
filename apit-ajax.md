@@ -288,4 +288,4 @@ console.log(result.contents);
 const dataFromAPI = JSON.parse(result.contents);
 ```
 
-5. Note that allOrigins puts the API's response inside the `contents` property. Contents is just text, so it still needs to be converted into a table/object using the JSON.parse() function.
+5. Note that allOrigins puts the API's response inside the `contents` property. Contents is just text, so it still needs to be converted into an array/object using the JSON.parse() function.

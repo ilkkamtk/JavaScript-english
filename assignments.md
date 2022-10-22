@@ -49,7 +49,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
    * Save the numbers to an array, then use for-loop to iterate in reverse order. 
    * Do not use array.reverse() function.
 2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in a numbered list (`<ol>`) in the same order as they were entered. (2p)
-3. Write a program that asks for the names of six dogs. The program prints dog names to unordered list (<ul>) in reverse alphabetical order. (2p)
+3. Write a program that asks for the names of six dogs. The program prints dog names to unordered list `<ul>` in reverse alphabetical order. (2p)
 4. Write a program that asks the user for figures until he gives zero. The given figures are printed in the console from the largest to the smallest. (2p)
 5. Write a program that prompts the user for numbers. When the user enters one of the numbers he previously entered, the program will announce that the number has already been given and stops its operation and then prints all the given numbers to the console in ascending order. (2p)
 6. Write a function called append(), which receives an array of strings as a parameter. The function returns a string formed by concatenating the elements of the array. (2p)

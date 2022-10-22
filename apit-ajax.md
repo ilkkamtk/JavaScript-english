@@ -199,7 +199,7 @@ document.addEventListener('submit', async function(evt) {
     // send the data
    try {
       const response = await fetch('/someAddressWhereDataIsSent', data);  // Send data to server and receive a server response
-      if (!response.ok) throw new Error('Invalid server input!');         // If an error occurs, an error message is thrown
+      if (!response.ok) throw new Error('Invalid input!');         // If an error occurs, an error message is thrown
       const json = await response.json();                                 // convert the loaded text JSON to a JavaScript object / array
       console.log('result', json);                                        // print the result to the console
    } catch (e) {
@@ -252,7 +252,7 @@ The ES8 version of JavaScript introduced the syntax of [async / await](https://d
     async function showPics() {  
         try{
            const response = await fetch('pics.json');              // The download is started.
-           if (!response.ok) throw new Error('Invalid server input!'); // If an error occurs, an error message is thrown
+           if (!response.ok) throw new Error('Invalid input!'); // If an error occurs, an error message is thrown
            const images = await response.json();                     // convert the loaded text JSON to a JavaScript object / array
            const name = images[1].name;     // the 'name' property of the second object in the 'images' array
            const description = images[1].description; // 'description' property of the second object object in the 'images' array

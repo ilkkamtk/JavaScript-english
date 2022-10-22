@@ -141,8 +141,8 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    <article class="card">
       <h2>title_from_picArray</h2>
       <figure>
-         <img src="X_from_picArray" alt="title_from_picArray">
-         <figcaption>Y_from_picarray</figcaption>
+         <img src="medium_image_from_picArray" alt="title_from_picArray">
+         <figcaption>caption_from_picarray</figcaption>
       </figure>
       <p>description_from_picArray</p>
    </article>

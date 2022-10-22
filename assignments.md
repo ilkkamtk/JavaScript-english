@@ -16,7 +16,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
    * The confirmation window can be displayed with the function [confirm()](https://github.com/ilkkamtk/JavaScript-english/blob/main/BOM-DOM-event.md#confirm). The function returns true if the user selects OK. If the user selects Cancel, the function returns false.
    * You cannot calculate the square root of a negative number. If the number entered by the user is negative, the program prints "The square root of a negative number is not defined" to the HTML document.
 7. Write a program that asks the user for the number of dice. The program throws all the dice once and prints the sum of the numbers. (2p)
-8. Write a program that prompts the user for the start and end year. The program prints all leap years from the interval given by the user. Printing is done in an unnumbered list to the HTML document. (3p)
+8. Write a program that prompts the user for the start and end year. The program prints all leap years from the interval given by the user. Printing is done in an unordered list to the HTML document. (3p)
    * Example output HTML code:
    ```html
    <ul>

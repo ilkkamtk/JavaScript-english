@@ -66,13 +66,22 @@ You can choose which tasks you want to do. However, the maximum score for each m
 10. Write a voting program as described below for small-scale meeting use. (8p)
     * The program asks for the number of candidates. 
     * Then the program asks for the names of the candidates: `'Name for candidate 1`
-    * ...and prints the candidates and initial vote count to the console:
-    ```text
-    {
-       ellie: 0,
-       frank: 0,
-       pamela: 0
-    }
+    * Store the candidates' names and initial vote count in objects like this:
+    ```javascript
+    [
+        {
+            name: 'ellie',
+            votes: 0,
+        },
+        {
+            name: 'frank',
+            votes: 0,
+        },
+        {
+            name: 'pamela',
+            votes: 0,
+        },
+    ]
     ```
     * The program asks for the number of voters.
     * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
@@ -84,7 +93,14 @@ You can choose which tasks you want to do. However, the maximum score for each m
     frank: 1 votes
     ellie: 1 votes
     ```
-    * Some help: [How to sort objects in JavaScript](https://medium.com/@gmcharmy/sort-objects-in-javascript-e-c-how-to-get-sorted-values-from-an-object-142a9ae7157c)
+    * Some help:
+    ```javascript
+    // You need to compare votes so console log a and b to see how to get the correct property.
+    someArray.sort((a, b) => {
+       console.log(a, b);
+       return b - a;
+    });
+    ```
 
 ## Module 3. BOM, DOM and events
 Download this ZIP-file, extract it and move the content to the folder where you have your other files for this course.

@@ -149,7 +149,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    ```
 6. Open `t6` folder in your IDE/editor. Make a script that opens an alert window that says 'Button Clicked' when the `<button>` element is clicked. (1p)
 7. Open `t7` folder in your IDE/editor. Make a hover effect with JavaScript. (2p)
-   * when user mouses over `<p id="trigger">` change the picture of `<img id='target'>` form `picA.jpg` to `picB.jpg`
+   * when user mouses over `<p id="trigger">` change the picture of `<img id="target">` form `picA.jpg` to `picB.jpg`
    * when user mouses off, change the picture back to original
 8. Open `t8` folder in your IDE/editor. Make a simple calculator. (4p)
    * There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.

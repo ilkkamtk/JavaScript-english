@@ -160,12 +160,16 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    * eval() function is prohibited
    * No need to support decimal numbers, calculating integers is enough.
    * Example inputs: `3+5`, `2*78`, `3/6`, etc..
-10. Continue task 5. Open large image in a [modal](#modal) when `<article>` is clicked. (4p)
+10. Open `t10` folder in your IDE/editor. Read the first name and last name values from the form and print them in the `<p id="target">` (2p)
+    * remember to stop the default action of the form
+    * you can use [attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) in querySelector() to select the `<input>` elements
+    * example output: `Your name is Luke Skywalker`
+11. Continue task 5. Open large image in a [modal](#modal) when `<article>` is clicked. (6p)
     * kick yourself at this point if you used innerHTML to create the `<article>` and its content.
     * add the following html code between `</div>` and `</body>`
     ```html
     <dialog>
-       <a href="#">&#x2715;</a>
+       <span>&#x2715;</span>
        <img>
     </dialog>
     ```
@@ -173,7 +177,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
     * use [showModal() and close()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods) functions to show and hide `<dialog>`
     * the same time you are opening the modal, you should put the large image to the `<img>` in the modal. 
     * Don't forget to add `alt` attribute.
-    * use `<a>` inside `<dialog>` to close the modal.
+    * use `<span>` inside `<dialog>` to close the modal.
 <hr>
 <sub id="modal"><sup>* A modal is a dialog box/popup window that is displayed on top of the current page</sup></sub>
 

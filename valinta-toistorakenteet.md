@@ -273,6 +273,18 @@ For example, the following program asks the user for a number and prints all eve
             console.log(i);
         }
 ```
+You can emulate while-loop with for by creating an infinite loop and then stopping it with `break`:
+```javascript
+// ask for a name, stop when user enters empty value
+for (;;) {
+  const name = prompt('Enter a name');
+  if (name === '') {
+    break;
+  }
+  console.log(name);
+}
+```
+
 ## Nested loop structures
 
 Sometimes it is necessary to produce value combinations of two or more variables: for example, when printing a multiplication table of numbers from one to five, the first multiplication factor must obtain all integer values from one to five and the second multiplication factor as well.

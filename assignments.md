@@ -135,7 +135,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    <option value="5423679">Jones</option>
    ```
    * open Element Inspector from DevTools to see the full result. (right click, inspect...)
-5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image catption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element. (5p)
+5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image caption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element. (5p)
    * The structure of the articles should be this:
    ```html
    <article class="card">
@@ -159,18 +159,19 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    * No need to support decimal numbers, calculating integers is enough.
    * Example inputs: `3+5`, `2*78`, `3/6`, etc..
 10. Continue task 5. Open large image in a [modal](#modal) when `<article>` is clicked. (4p)
-   * add the following html code between `</div>` and `</body>`
-   ```html
-   <dialog>
-      <a href="#">&#x2715;</a>
-      <img>
-   </dialog>
-   ```
-   * picArray has two images for each item: medium and large. Medium is used in the `<img>` inside the `<article>` and large is used in the `<img>` inside the `<dialog>`.
-   * use [showModal() and close()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods) functions to show and hide `<dialog>`
-   * the same time you are opening the modal, you should put the large image to the `<img>` in the modal. 
-   * Don't forget to add `alt` attribute.
-   * use `<a>` inside `<dialog>` to close the modal.
+    * kick yourself at this point if you used innerHTML to create the `<article>` and its content.
+    * add the following html code between `</div>` and `</body>`
+    ```html
+    <dialog>
+       <a href="#">&#x2715;</a>
+       <img>
+    </dialog>
+    ```
+    * picArray has two images for each item: medium and large. Medium is used in the `<img>` inside the `<article>` and large is used in the `<img>` inside the `<dialog>`.
+    * use [showModal() and close()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods) functions to show and hide `<dialog>`
+    * the same time you are opening the modal, you should put the large image to the `<img>` in the modal. 
+    * Don't forget to add `alt` attribute.
+    * use `<a>` inside `<dialog>` to close the modal.
 <hr>
 <sub id="modal"><sup>* A modal is a dialog box/popup window that is displayed on top of the current page</sup></sub>
 

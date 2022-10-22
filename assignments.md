@@ -27,12 +27,12 @@ You can choose which tasks you want to do. However, the maximum score for each m
      <li>2008</li>
    </ul>
    ```
-8. Write a program that asks the user for an integer and tells if the number is a prime number. Prime numbers are number that are only divisible by one or the number itself. (2p)
+8. Write a program that asks the user for an integer and tells if the number is a prime number. (2p)
    * Prime numbers are numbers that are only divisible by 1 and itself.
    * For example, number 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer.
    * On the other hand, number 21 for example is not a prime number as it can be also be divided by numbers 3 and 7.
    * Print the result on the HTML document
-9. Make a program that initially asks the user for the number of dice and the sum of the eye numbers of interest to the user. The purpose of your program is now to find out with what probability the number of dice given by the user produces the sum of the number of eyes given by the user. For example, if the user enters 3 as the number of dice and 15 as the sum of the eyes, the program calculates the probability that the sum of the three dice's eye numbers is 15. (4p)
+9. Make a program that asks the user for the number of dice and the sum of the eye numbers of interest to the user. The purpose of your program is now to find out with what probability the number of dice given by the user produces the sum of the number of eyes given by the user. For example, if the user enters 3 as the number of dice and 15 as the sum of the eyes, the program calculates the probability that the sum of the three dice's eye numbers is 15. (5p)
    * Solve the problem by simulating: Have the program roll a given number of dice in a for-loop (e.g. 10,000 times) and calculate what proportion of the repetitions produced the sum of eye numbers of interest to the user.
    * Print the result on the HTML document
 
@@ -123,7 +123,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    * when user mouses off, change the picture back to original
 8. Open `t8` folder in your IDE/editor. Make a simple calculator. (4p)
    * There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
-9. Continue previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division) (3p)
+9. Continue previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division) (4p)
    * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods as well as the [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
    * eval() function is prohibited
    * No need to support decimal numbers, calculating integers is enough.

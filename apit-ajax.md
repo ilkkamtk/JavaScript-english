@@ -269,3 +269,23 @@ The ES8 version of JavaScript introduced the syntax of [async / await](https://d
     showPics();
 </script>
 ```
+
+## Fixing CORS errors
+
+Some open APIs cause [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors) errors. They can be bypassed by a proxy server like e.g. allOrigins: https://allorigins.win/.
+
+### Guide:
+
+1. Add a variable before the fetch command: `const proxy = 'https://api.allorigins.win/get?url=';`
+2. Add another variable after the previous line, where you store the address of the interface with its parameters: `const search = 'https://open-api.myhelsinki.fi/v2/places/?tags_search=accommodation'`;
+3. Combine the above: `const url = proxy + encodeURIComponent(search);`
+4. Perform the search:
+
+```javascript
+const response = await fetch(url);
+const result = await response.json();
+console.log(result.contents);
+const dataFromAPI = JSON.parse(result.contents);
+```
+
+5. Note that allOrigins puts the API's response inside the `contents` property. Contents is just text, so it still needs to be converted into a table/object using the JSON.parse() function.

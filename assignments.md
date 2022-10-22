@@ -188,15 +188,16 @@ Make an app that retrieves information about a TV series you enter and displays 
    * Step 1: Print the search result to the console (3p)
    * Step 2: Print one set of search results on a web page (4p)
       * required information: Name, link to details (url), medium image and summary
-      * add the link to `<a>` element
+      * add the link to `<a>` element. Also add `target="_blank"` to the link.
    * Step 3: Print the same information for all series from the search result on the web page as above (7p)
       * in addition, the genres to which the series belongs are printed
          * use `|` character (or similar, but no comma) to separate the genres
       * if TV series has no image, use default image
          * example default image: https://via.placeholder.com/100x200?text=text+here
       * you can comment out steps 1 and 2 at this point
-   * Step 4: Stylish layout with CSS and valid HTML (6p)
+   * Step 4: Stylish layout with CSS and valid HTML (4p)
       * you'll probably need at least 5-10 CSS rules to make a proper layout
+   * Step 5: show the link to details (url) in an [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) element which is inside a modal (`<dialog>`) 
 * First, make a valid HTML page with a search form. Example form:
 ```html
 <form action="https://api.tvmaze.com/search/shows">
@@ -223,3 +224,4 @@ Make an app that retrieves information about a TV series you enter and displays 
    * Search results are not cleared when a new search is made: 1p deduction
    * Comma `,` between genres: 1p deduction
    * Search form is not styled: 1-2p deduction
+   * url does not open in a modal: 2p deduction

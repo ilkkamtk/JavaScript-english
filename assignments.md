@@ -128,12 +128,13 @@ Download this ZIP-file, extract it and move the content to the folder where you 
    <li>Jones</li>
    ```
 4. Open `t4` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (2p)
-   * Add the following HTML code to the element with `id="target"`. Add the values from 'students' object to the `<option>` elements in a for-loop.
+   * Add the following HTML code to the element with `id="target"`. Add the values from 'students' array to the `<option>` elements in a for-loop.
    ```html
    <option value="2345768">John</option>
    <option value="2134657">Paul</option>
    <option value="5423679">Jones</option>
    ```
+   * open Element Inspector from DevTools to see the full result. (right click, inspect...)
 5. Open `t5` folder in your IDE/editor. Create multiple `<article>` elements that contain heading, image, image catption and text and populate them with the data from `picArray`. Add the articles to the `<section>` element. (5p)
    * The structure of the articles should be this:
    ```html

@@ -187,14 +187,13 @@ Make an app that retrieves information about a TV series you enter and displays 
 * Requirements:
    * Step 1: Print the search result to the console (3p)
    * Step 2: Print one set of search results on a web page (4p)
-      * required information: Name, link to home page (officialSite), medium image and summary
+      * required information: Name, link to details (url), medium image and summary
       * add the link to `<a>` element
    * Step 3: Print the same information for all series from the search result on the web page as above (7p)
       * in addition, the genres to which the series belongs are printed
          * use `|` character (or similar, but no comma) to separate the genres
       * if TV series has no image, use default image
          * example default image: https://via.placeholder.com/100x200?text=text+here
-      * if TV series has no officialSite, use url
       * you can comment out steps 1 and 2 at this point
    * Step 4: Stylish layout with CSS and valid HTML (6p)
       * you'll probably need at least 5-10 CSS rules to make a proper layout
@@ -210,8 +209,8 @@ Make an app that retrieves information about a TV series you enter and displays 
 * Add a submit event to the form to launch the search.
 * To search, you need to get the value of the 'q' field, which is then sent to the API using fetch.
 * There are likely to be multiple TV series in the search result, so make a for loop for printing the HTML needed to display the data
-* Data in some series may be missing, for example, the `image` object or the `officialSite` property. In that case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use [try ... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), or the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
-   * You can try this with the keyword 'dome', for example. It returns 10 TV series from the API, but a show called 'Battle Dome' is missing `image` and `officialSite`.
+* Data in some series may be missing, for example, the `image` object. In that case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+   * You can try this with the keyword 'dome', for example. It returns 10 TV series from the API, but a show called 'Battle Dome' is missing `image`.
 * Grading:
    * HTML not valid: 1p deduction for each error (warnings are not errors)
    * Default font: 1p deduction

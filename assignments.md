@@ -154,9 +154,9 @@ Download this ZIP-file, extract it and move the content to the folder where you 
 8. Open `t8` folder in your IDE/editor. Make a simple calculator. (4p)
    * There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
    * Use the value attribute of `<option>` elements to decide which operation the calculator needs to do. [Example.](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_value2)
-   * Show the result in `<p id="result">`
-9. Continue previous task. Remove the dropdown menu and the second text field. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division) (4p)
-   * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods as well as the [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
+   * Show the result in `<p id="result">` when the button is clicked.
+9. Open `t9` folder in your IDE/editor. This is continuation to previous task. There is only one text field left, where the user writes the calculation (addition, subtraction, multiplication or division) (4p)
+   * You can use the [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) and [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) methods.
    * eval() function is prohibited
    * No need to support decimal numbers, calculating integers is enough.
    * Example inputs: `3+5`, `2*78`, `3/6`, etc..

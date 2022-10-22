@@ -48,39 +48,43 @@ You can choose which tasks you want to do. However, the maximum score for each m
 1. Write a program that prompts the user for five numbers and prints them in the reverse order they were entered. Print the result to the console.(2p)
    * Save the numbers to an array, then use for-loop to iterate in reverse order. 
    * Do not use array.reverse() function.
-2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in a numbered list (`<ol>`) in the same order as they were entered. (2p)
+2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in an ordered list (`<ol>`) in the same order as they were entered. (2p)
 3. Write a program that asks for the names of six dogs. The program prints dog names to unordered list `<ul>` in reverse alphabetical order. (2p)
 4. Write a program that asks the user for numbers until he gives zero. The given numbers are printed in the console from the largest to the smallest. (2p)
 5. Write a program that prompts the user for numbers. When the user enters one of the numbers he previously entered, the program will announce that the number has already been given and stops its operation and then prints all the given numbers to the console in ascending order. (2p)
-6. Write a function called append(), which receives an array of strings as a parameter. The function returns a string formed by concatenating the elements of the array. (2p)
+6. Write a function that returns a random dice roll between 1 and 6. The function should not have any parameters. Write a main program that rolls the dice until the result is 6. The main program should print out the result of each roll in an unordered list (`<ul>`). (2p)
+7. Modify the function above so that it gets the number of sides on the dice as a parameter. With the modified function you can for example roll a 21-sided role-playing dice. The difference to the last exercise is that the dice rolling in the main program continues until the program gets the maximum number on the dice, which is asked from the user at the beginning. (2p)
+8. Write a function called `concat()`, which receives an array of strings as a parameter. The function returns a string formed by concatenating the elements of the array. (2p)
    * Example: In a four-item array, there are items Johnny, DeeDee, Joey and Marky. The function returns the string JohnnyDeeDeeJoeyMarky.
-   * Do not use array.join() function
-   * You can hard code the array, no need for prompt().
-7. Write a function called even(), which receives an array containing numbers as a parameter. The function returns a second (usually smaller) array which has the even numbers of the original array. The function must not make changes to the original table. (3p)
+   * Do not use `array.join()` function
+   * You can hardcode the array, no need for `prompt()`.
+   * Print the result to HTML document.
+9. Write a function called `even()`, which receives an array containing numbers as a parameter. The function returns a second (usually smaller) array which has the even numbers of the original array. The function must not make changes to the original table. (3p)
    * Example: In a three-item array, there are items 2, 7 and 4. The function returns a two-item array with items 2 and 4.
    * Print both the original array and the new array to the console in the main program after you have called the function.
-8. Write a voting program as described below for small-scale meeting use. (8p)
-   * The program asks for the number of candidates. 
-   * Then the program asks for the names of the candidates: `'Name for candidate 1`
-   * ...and prints the candidates and initial vote count to the console:
-   ```text
-   {
-      ellie: 0,
-      frank: 0,
-      pamela: 0
-   }
-   ```
-   * The program asks for the number of voters.
-   * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
-   * The program announces the name of the winner and the results by printing it to the console:
-   ```text
-   The winner is pamela by 4 votes.
-   results:
-   pamela: 3 votes
-   frank: 1 votes
-   ellie: 1 votes
-   ```
-   * Some help: [How to sort objects in JavaScript](https://medium.com/@gmcharmy/sort-objects-in-javascript-e-c-how-to-get-sorted-values-from-an-object-142a9ae7157c)
+   * You can hardcode the array, no need for `prompt()`.
+10. Write a voting program as described below for small-scale meeting use. (8p)
+    * The program asks for the number of candidates. 
+    * Then the program asks for the names of the candidates: `'Name for candidate 1`
+    * ...and prints the candidates and initial vote count to the console:
+    ```text
+    {
+       ellie: 0,
+       frank: 0,
+       pamela: 0
+    }
+    ```
+    * The program asks for the number of voters.
+    * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
+    * The program announces the name of the winner and the results by printing it to the console:
+    ```text
+    The winner is pamela by 4 votes.
+    results:
+    pamela: 3 votes
+    frank: 1 votes
+    ellie: 1 votes
+    ```
+    * Some help: [How to sort objects in JavaScript](https://medium.com/@gmcharmy/sort-objects-in-javascript-e-c-how-to-get-sorted-values-from-an-object-142a9ae7157c)
 
 ## Module 3. BOM, DOM and events
 Download this ZIP-file, extract it and move the content to the folder where you have your other files for this course.

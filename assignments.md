@@ -103,7 +103,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
     ```
 
 ## Module 3. BOM, DOM and events
-Download this ZIP-file, extract it and move the content to the folder where you have your other files for this course.
+[Download this ZIP-file](https://github.com/ilkkamtk/module3-starters), extract it and move the content to the folder where you have your other files for this course.
 1. Open `t1` folder in your IDE/editor. Add HTML by using innerHTML property (2p)
    * Add the following HTML code to the element with `id="target"`
    ```html

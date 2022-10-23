@@ -98,12 +98,12 @@ Above example uses so-called arrow function to write the sorting function; arrow
 
 ### Object literals
 
-Object Literal defines statically declared data structure. Object literal is simply a comma-separated list of name value pairs inside curly braces. These 'names' are called properties. Obect literal can be used similarly as e.g. a dictionary in Python. Typical object literal looks like this:
+Object Literal defines statically declared data structure. Object literal is simply a comma-separated list of name value pairs inside curly braces. These 'names' are called properties. Object literal can be used similarly as e.g. a dictionary in Python. Typical object literal looks like this:
 ```javascript
 const student = {
   firstName: 'Greg',
   lastName: 'Focker',
-  studentId: 234359,
+  studentId: '234359',
   phone: '040 5902123',
 }
 ```

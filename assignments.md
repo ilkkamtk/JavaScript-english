@@ -164,7 +164,7 @@ Download this ZIP-file, extract it and move the content to the folder where you 
     * remember to stop the default action of the form
     * you can use [attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) in querySelector() to select the `<input>` elements
     * example output: `Your name is Luke Skywalker`
-11. Continue task 5. Folder `t11` already exists. Open large image in a [modal](#modal) when `<article>` is clicked. (6p)
+11. Continue task 5. Folder `t11` already exists. Follow the instructions in `t11.txt`. Modify the program to open large image in a [modal](#modal) when `<article>` is clicked. (6p)
     * kick yourself at this point if you used innerHTML to create the `<article>` and its content.
     * add the following html code between `</div>` and `</body>`
     ```html

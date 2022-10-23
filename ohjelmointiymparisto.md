@@ -38,7 +38,7 @@ To get started writing programs, follow these steps:
     ```
 
 5. Use the Ctrl-S key combination to save the file.
-6. Paina työskentelyalueen oikeassa laidassa kelluvan selainpalkin painiketta (ks. kuva). Sivu avataan ja JavaScript-koodi suoritetaan valitsemassasi selaimessa. Näissä ohjeissa käytetään Chrome-selainta.
+6. Press the button on the floating browser bar on the right side of the working area (see picture). The page will open and the JavaScript code will be executed in the browser of your choice. These instructions use the Chrome browser.
 
     ![selainpalkki](img/selainpalkki.png)
 

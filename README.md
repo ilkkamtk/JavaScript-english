@@ -15,6 +15,9 @@
 4. Module 4
    * [Open APIs and AJAX](apit-ajax.md)
 
+## Exercises
+[Exercise sets](assignments.md)
+
 ### Recommended pre-assignments
 1. [Udemy, JavaScript](https://www.udemy.com/course/javascript-essentials/)
    1. Section 1: 1-6 

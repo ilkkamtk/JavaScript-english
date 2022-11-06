@@ -443,10 +443,10 @@ Callbacks are functions passed as an argument to another function to be executed
 
 As an example, event listeners are asynchronous callbacks that are only executed when a specific event occurs.
 ```javascript
-function clickaHandler() {
+function clickHandler() {
   console.log('The user clicked on the page.');
 }
-document.addEventListener('click', clickaHandler);
+document.addEventListener('click', clickHandler);
 ```
 #### Callback hell
 Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.

@@ -393,7 +393,7 @@ The following program asks the user for two values of calories and converts them
         j1 = multiplier * k1;
         j2 = multiplier * k2;
 
-        console.log('At breakfast you got '+j1+' kJ and at dinner you got '+j2+' kJ.');
+        console.log(`At breakfast you got ${j1}kJ and at dinner you got ${j2}kJ.`);
 ```
 
 The use of designated constant `multiplier` in strict mode ensures that the correct value is used for both multiplications. If the conversion factors were written to the program code twice, it is possible that a typographical error would have occurred in the decimals of the second factor, which would result in a small but difficult-to-detect calculation error in the final result.

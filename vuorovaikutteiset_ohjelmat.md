@@ -385,15 +385,14 @@ To preserve such a constant value, a named constant defined by the word `const` 
 
 The following program asks the user for two values of calories and converts them to joules:
 ```javascript
-        const multiplier = 4.1868;
-        let k1, k2, j1, j2;
-        k1 = prompt('Give the amount of energy for lunch (kcal).');
-        k2 = prompt('Enter the amount of energy for dinner(kcal).');
+const multiplier = 4.1868;
+const k1 = prompt('Give the amount of energy for lunch (kcal).');
+const k2 = prompt('Enter the amount of energy for dinner(kcal).');
 
-        j1 = multiplier * k1;
-        j2 = multiplier * k2;
+const j1 = multiplier * k1;
+const j2 = multiplier * k2;
 
-        console.log(`At breakfast you got ${j1} kJ and at dinner you got ${j2} kJ.`);
+console.log(`At breakfast you got ${j1} kJ and at dinner you got ${j2} kJ.`);
 ```
 
 The use of designated constant `multiplier` in strict mode ensures that the correct value is used for both multiplications. If the conversion factors were written to the program code twice, it is possible that a typographical error would have occurred in the decimals of the second factor, which would result in a small but difficult-to-detect calculation error in the final result.

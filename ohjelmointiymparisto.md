@@ -4,7 +4,7 @@ Welcome to study programming in JavaScript!
 
 JavaScript is a programming language that can be used to produce dynamic, programmatically generated content for web pages.
 
-In the course we use the PyCharm IDE. You can obtain a student license at https://www.jetbrains.com/student/ and then download the [product](https://www.jetbrains.com/pycharm/) (or [Toolbox](https://www.jetbrains.com/Toolbox-app/).)
+In the course we use the PyCharm IDE. You can obtain a student license at https://www.jetbrains.com/student/ and then download the [product](https://www.jetbrains.com/pycharm/) (or [Toolbox](https://www.jetbrains.com/toolbox-app/).)
 
 To get started writing programs, follow these steps:
 

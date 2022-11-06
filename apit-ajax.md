@@ -69,7 +69,7 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
     async function asynchronousFunction() {                 // asynchronous function is defined by the async keyword
         console.log('asynchronous download begins');
         try {                                               // error handling: try/catch/finally
-            const response = await fetch('http://127.0.0.1:3000/kentta/00A');    // starting data download, fetch returns a promise which contains an object of type 'response'
+            const response = await fetch('http://127.0.0.1:3000/airport/00A');    // starting data download, fetch returns a promise which contains an object of type 'response'
             const jsonData = await response.json();          // retrieving the data retrieved from the response object using the json() function
             console.log(jsonData.ICAO, jsonData.Name);    // log the result to the console
         } catch (error) {

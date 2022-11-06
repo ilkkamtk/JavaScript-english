@@ -85,19 +85,18 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
     console.log('the script ends');
 ```
 ##### Task: Try the script above. Use the URL of assignment 2 of Python module 13 ([Finnish](https://github.com/vesavvo/Python_Ohjelmistoteema/blob/main/Teht%C3%A4v%C3%A4t.md#13-taustapalvelun-ja-rajapinnan-rakentaminen) or [English](https://github.com/vesavvo/Python_Ohjelmistoteema/blob/main/English/Exercises.md#13-setting-up-a-backend-service-with-an-interface)).
-   - First install Flask-CORS extension to your Python app. Example:
-     <script src="https://gist.github.com/ilkkamtk/26ba4289a3b1bb26b3ff002570c79ec5.js"></script>
-   
-The code should log to the console:
-```text
-the script starts
-regular function complete 49999999990067860000
-asynchronous download begins
-the script ends
-00A Total Rf Heliport
-asynchronous download complete
-```
-Also look at the Network tab in the developer tools and reload the page. You will notice that the load of URL will not begin until the standard function is complete.
+   - First install Flask-CORS extension to your Python app. 
+   - Example: https://gist.github.com/ilkkamtk/26ba4289a3b1bb26b3ff002570c79ec5
+   - The code above should log to the console:
+   ```text
+    the script starts
+    regular function complete 49999999990067860000
+    asynchronous download begins
+    the script ends
+    00A Total Rf Heliport
+    asynchronous download complete
+   ```
+   - Also look at the Network tab in the developer tools and reload the page. You will notice that the loading of URL will not begin until the standard function has finished executing.
 
 ## J = JavaScript
 In AJAX, JavaScript is used to display downloaded data in an HTML document.

@@ -110,12 +110,12 @@ XML is a markup language, like HTML. It is intended for storing and transferring
         <name> Sleeping cat </name>
         <description> In this picture, the cat is sleeping. </description>
         <address> http://placekitten.com/321/241 </address>
-    </ picture>
+    </picture>
     <picture>
         <name> Lying cat </name>
         <Description> In this picture, the cat is lying. </Description>
         <address> http://placekitten.com/421/251 </address>
-    </ picture>
+    </picture>
 </images>
 ```
 Around the mid-2000s, when AJAX functionality was added to JavaScript, XML was a natural alternative to use for data transfer.

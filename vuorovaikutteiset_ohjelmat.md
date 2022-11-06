@@ -58,9 +58,6 @@ Using external JavaScript files is the preferred method, because it makes mainta
 Before `defer` attribute existed, the same was achieved by placing the `<script>` elements to the end of the document right before `</body>` closing tag.
 
 ## Printing
-
-Let’s start with a simple program that produces a printout for the user.
-
 JavaScript offers three printing options:
 1. Console log output
 2. Pop-up warning window

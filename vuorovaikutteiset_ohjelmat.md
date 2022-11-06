@@ -109,7 +109,7 @@ A JavaScript program can print HTML content as part of a web page using [dom met
 <script>
     'use strict';
     const name = 'Frank';
-    document.querySelector('#target').innerHTML = 'Good morning, ' + name + '!');
+    document.querySelector('#target').innerHTML = 'Good morning, ' + name + '!';
 </script>
 </body>
 </html>

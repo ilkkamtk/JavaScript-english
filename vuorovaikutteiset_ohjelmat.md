@@ -53,7 +53,7 @@ example.html
 </html>
 ```
 
-Using external JavaScript files is the preferred method, because it makes maintaining code easier in real life projects. Note the `defer` attrubute in the ´<script>´ element. Defer specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing. This means that scripts are executed after all the HTML elements of the document are ready. If the HTML elements are not there, obviously JavaScript cannot manipulate them and the app does not work.
+Using external JavaScript files is the preferred method, because it makes maintaining code easier in real life projects. Note the `defer` attrubute in the `<script>` element. Defer specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing. This means that scripts are executed after all the HTML elements of the document are ready. If the HTML elements are not there, obviously JavaScript cannot manipulate them and the app does not work.
 
 Before `defer` attribute existed, the same was achieved by placing the `<script>` elements to the end of the document right before `</body>` closing tag.
 

@@ -231,7 +231,7 @@ Execution of the program cannot proceed until the user has entered a valid weigh
 
 ## do/while
 
-Do/while lauseessa toistoehdon voimassaolo testataan vasta rakenteesta poistuttaessa. Toistettava ohjelmanosa siis suoritetaan aina vähintään yhden kerran.
+In the do/while statement, the validity of the repetition condition is tested only when the structure is exited. The repeatable program part is therefore always executed at least once.
 
 The following program rolls the dice and prints the resulting numbers until the dice become an eye number six:
 

@@ -108,7 +108,7 @@ const student = {
 }
 ```
 
-Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstname` or `student["firstname"] `.
+Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstName` or `student["firstName"] `.
 ```javascript
 const greeting = `Hello, my name is ${student.firstName} ${student.lastName}`;
 const studentInfo = `student number: ${student['studentId']}, phone number: ${student['phone']}`

@@ -48,7 +48,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
    * For example, number 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer.
    * On the other hand, number 21 for example is not a prime number as it can be also be divided by numbers 3 and 7.
    * Print the result on the HTML document.
-10. Make a program that asks the user for the number of dice and the sum of the eye numbers of interest to the user. The purpose of your program is now to find out with what probability the number of dice given by the user produces the sum of the number of eyes given by the user. For example, if the user enters 3 as the number of dice and 15 as the sum of the eyes, the program calculates the probability that the sum of the three dice's eye numbers is 15. (5p)
+10. Make a program that asks the user for the number of dice and the sum of the eye numbers of interest to the user. The purpose of your program is now to find out with what probability the number of dice given by the user produces the sum of the number of eyes given by the user. For example, if the user enters 3 as the number of dice and 17 as the sum of the eyes, the program calculates the probability that the sum of the three dice's eye numbers is 17. (5p)
     * Solve the problem by simulating: Have the program roll a given number of dice in a for-loop (e.g. 10,000 times) and calculate what proportion of the repetitions produced the sum of eye numbers of interest to the user.
     * Print the result on the HTML document:
     ```text

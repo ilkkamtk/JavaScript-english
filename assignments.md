@@ -1,5 +1,18 @@
 # Assignments
-Create a folder for each module. Create one HTML- and JavaScript file for each assignment. File names should contain the assignment's number. All HTML should be valid. Submit a link that points to the module folder, not indivdual files.
+Create a folder for each module. Create one HTML- and JavaScript file for each assignment. File names should contain the assignment's number. All HTML should be valid. Submit links that point to the module folder in users.metropolia.fi (not indivdual files) and to the GitHub repo of your JavaScript assignments.
+Example submission:
+
+[Link to users.metropolia.fi](https://users.metropolia.fi/~username/folder)
+
+[Link to GitHub](https://github.com/username/repository)
+
+Completed assignments:
+
+1, 2p
+4, 3p
+5, 6p
+
+Total 11p
 
 You can choose which tasks you want to do. However, the maximum score for each module is 20 points. 8 points/module are required to pass.
 

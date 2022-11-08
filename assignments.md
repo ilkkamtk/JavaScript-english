@@ -9,8 +9,8 @@ Example submission:
 
 Completed assignments:
 
-1, 2p
-4, 3p
+1, 2p<br>
+4, 3p<br>
 5, 6p
 
 Total 11p

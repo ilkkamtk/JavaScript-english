@@ -52,7 +52,7 @@ You can loop an array by using for statement and [array.length](https://develope
 ```javascript
     const names = ['Frank', 'Scott', 'Jasmine', 'Don'];
 
-    for (let i = 0; i < throws.length; i++) {
+    for (let i = 0; i < names.length; i++) {
         console.log(`Name: ${names[i]}`);
     }
 ```

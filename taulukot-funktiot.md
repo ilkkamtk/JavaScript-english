@@ -81,7 +81,7 @@ Pre-programmed methods can be applied to the array to modify it.
 Examples of these methods are:
 - `sort()` sorts the array alphabetically
 - `reverse()` reverses the items in the array in reverse order
-- `shift()` deletes and restores the 1st item in the array
+- `shift()` deletes and returns the 1st item in the array
 - `pop()` deletes and returns the last item in the array
 - `push(value)` adds the value at the end of the array, multiple values separated by commas
 - `includes(value)` checks whether the array contains the given value

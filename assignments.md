@@ -103,7 +103,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
     * The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
     * The program announces the name of the winner and the results by printing it to the console:
     ```text
-    The winner is pamela by 4 votes.
+    The winner is pamela with 3 votes.
     results:
     pamela: 3 votes
     frank: 1 votes

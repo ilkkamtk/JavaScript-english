@@ -311,6 +311,9 @@ document.querySelector('#paragraph').classList.replace('red', 'blue');
 ```
 For more methods for handling class attributes, see [classList documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
 
+### Sanitize innerHTML (extra)
+`innerHTML` property could be used for Cross Site Scripting attacks. [Here is an article on how to prevent it.](https://gomakethings.com/preventing-cross-site-scripting-attacks-when-using-innerhtml-in-vanilla-javascript/#sanitizing-content-before-adding-it-to-the-dom)
+
 # Event handling
 Because JavaScript is used to add interactivity to a website, there is a need for some way to respond to actions and events performed by the user or on the system.This method is called [event handling.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 

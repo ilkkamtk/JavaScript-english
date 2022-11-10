@@ -337,33 +337,33 @@ It is observed that when the array passed by the main program parameter is modif
 
 ## Array as a return value
 
-You can return a reference to a array as the return value of a function. Let's look at the program below that returns the values of a lottery as an array:
+You can return a reference to an array as the return value of a function. Let's look at the program below that returns the values of a lottery as an array:
 
 ```javascript
-        function doLottery (numbers, num) {
-          const row = [];
-          let r;
-          for (var i = 1; i <= num; i ++) {
-            var ok = false;
-        
-            while (! ok) {
-              ok = true;
-              r = Math.floor (Math.random () * numbers) +1;
-              for (var j = 0; j <i; j ++) {
-                if (row [j] == r) {
-                  ok = false;
-                }
-              }
-            }
-            row [i] = r;
-          }
-          return line;
-        }
+function doLottery (numbers, num) {
+  const row = [];
+  let r;
+  for (let i = 0; i < num; i ++) {
+    let ok = false;
 
-        const lottery = doLottery(40,7);
-        for (let i = 1; i<=lottery.length; i++) {
-            console.log(lottery[i]);
+    while (!ok) {
+      ok = true;
+      r = Math.floor(Math.random() * numbers) + 1;
+      for (let j = 0; j < i + 1; j ++) {
+        if (row [j] === r) {
+          ok = false;
         }
+      }
+    }
+    row[i] = r;
+  }
+  return row;
+}
+
+const lottery = doLottery(40,7);
+for (let i = 0; i < lottery.length; i++) {
+    console.log(lottery[i]);
+}
 ```
 Note that the lottery number array was created inside the function. The reference to the created array is returned as the return value of the function (the value of the `row` of the function's internal array variable). The lottery row is accessed from outside the function via the array variable `lottery`; its value is the reference to the array obtained as the return value of the function.
 

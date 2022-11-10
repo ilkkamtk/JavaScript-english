@@ -148,7 +148,7 @@ The p-element selected in the example above is stored as an element object (or e
 
 Because the DOM describes the document as a tree-like structure, the terms parent, child, and sibling are used in this context. For example, in the figure above, the h1 element is the child of the body element and the sibling of the a-element. Correspondingly, the body element is the parent of both the h1 and a elements.
 
-## [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)-rajapinta
+## [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)-interface
 The `document` interface represents a web page, it contains all the other objects in the document. To select any HTML element from a document, you must start from the document interface. For example, `document.getElementByID('logo')`
 ### Key Functions and Features
 ```javascript

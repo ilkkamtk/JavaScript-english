@@ -31,7 +31,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
 6. Write a program that prints the text "Should I calculate the square root?" in a confirmation window. If the user selects OK, the program asks for the number and calculates and prints its square root to the HTML document. If the user selects Cancel, the program prints the text "The square root is not calculated." to the HTML document (**3p**)
    - The confirmation window can be displayed with the function [confirm()](https://github.com/ilkkamtk/JavaScript-english/blob/main/BOM-DOM-event.md#confirm). The function returns true if the user selects OK. If the user selects Cancel, the function returns false.
    - You cannot calculate the square root of a negative number. If the number entered by the user is negative, the program prints "The square root of a negative number is not defined" to the HTML document.
-7. Write a program that rolls user defined amount of dice and displays the sum of the results of the dice rolls.(**2p**)
+7. Write a program that rolls user defined number of dice and displays the sum of the results of the dice rolls.(**2p**)
    - First, program asks the user for the number of dice rolls. 
    - Then the program throws a die as many times as the user defined.
    - Print the sum of the results in the console or in the HTML document.

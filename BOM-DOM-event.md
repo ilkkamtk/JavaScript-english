@@ -152,7 +152,7 @@ Because the DOM describes the document as a tree-like structure, the terms paren
 The `document` interface represents a web page, it contains all the other objects in the document. To select any HTML element from a document, you must start from the document interface. For example, `document.getElementByID('logo')`
 ### Key Functions and Features
 ```javascript
-document.querySelector ('# logo') // retrieves a single element from a document using the css selector. In this case with a certain id
+document.querySelector ('#logo') // retrieves a single element from a document using the css selector. In this case with a certain id
 document.querySelectorAll ('.button') // retrieves elements from a document using the css class selector.
 document.getElementById ('logo') // retrieves an element with a specific id from the document
 

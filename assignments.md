@@ -185,7 +185,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
     - example output: `Your name is Luke Skywalker`
 11. Continue task 5. Folder `t11` already exists. Follow the instructions in `t11.txt`. Modify the program to open large image in a [modal](#modal) when `<article>` is clicked. (**6p**)
     - kick yourself at this point if you used innerHTML to create the `<article>` and its content.
-    - add the following html code between `</div>` and `</body>`
+    - add the following html code between `</div>` and `</body>` manually to the HTML-document (no JS)
     ```html
     <dialog>
        <span>&#x2715;</span>

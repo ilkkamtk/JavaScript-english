@@ -218,7 +218,7 @@ document.scripts // retrieves all script elements
         })
    ```
 
-4. List of all p-elements in the "bulletin" class:
+4. List of all p-elements that have "bulletin" class:
     ```javascript
     const x = document.querySelectorAll('p.bulletin');
     ```

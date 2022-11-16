@@ -349,7 +349,7 @@ The event handler receives an [event object](https://developer.mozilla.org/en-US
 In the example code above, this item is the `<button>` element.
 
 ### [Study this list of events](https://developer.mozilla.org/en-US/docs/Web/Events)
-Most important at this point are the mouse related events.
+Most important at this point are the [mouse related events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events).
 
 ## Syntax
 Three different syntaxes can be used in event handling.

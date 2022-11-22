@@ -59,7 +59,7 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
 
     function synchronousFunction() {
       let number = 1;
-      for(let i = 1; i < 10000000000; i++){
+      for(let i = 1; i < 1000000; i++){
         number += i;
         console.log('synchronousFunction running');
       }
@@ -77,7 +77,7 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
         } finally {                                         // finally = this is executed anyway, whether the execution was successful or not
             console.log('asynchronous load complete');
         }
-    };
+    }
 
     synchronousFunction();
     asynchronousFunction();

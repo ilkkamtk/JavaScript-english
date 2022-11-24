@@ -190,12 +190,15 @@ document.addEventListener('submit', async function(evt) {
     // ... prevent the default action.
     evt.preventDefault();
     // create an object 'data' to which user input from the form is added and the http method is set to POST
-    const data = {
+    const data = JSON.stringify({
         body: {
             fname: document.querySelector('input[name=fName]').value,
             lname: document.querySelector('input[name=lName]').value
+        }),
+        method: 'POST',
+        headers: {
+              'Content-type': 'application/json',
         },
-        method: 'POST'
     }
     // send the data
    try {

@@ -404,29 +404,3 @@ Calling a function that contains a block of code is the same to the previous exa
         console.log(quadraticSum(3,5));
 ```
 
-## Recursion
-_Extra_
-
-Recursion refers to a situation where a function calls itself, as a result of which the called function calls itself again, and so on. At some point, the deepening of the call stack ends and the recursion begins to unravel.
-
-Consider the factorial calculation as an example of a recursive program. Factorial refers to multiplication, in which the factors of multiplication are, in addition to the number, all smaller positive integers, each at a time. For example, the factorial of the number 5 is 120.
-
-Thus, the number 5 factorial is calculated as necessary to find out the number 4 factorial, which in turn is 4 times the number 3 factorial and so on.
-
-Each factorial is always expressed by the factorial of an equally small number, until we finally end up with the factorial of the number 1, which is known to be one.
-
-As a program, this can be expressed as follows:
-
-```javascript
-        function factorial(number) {
-            if (number==1)
-                return 1;
-            else
-                return number * factorial(number-1);
-        }
-
-        console.log(factorial(5));
-```
-
-Although a recursive function seems inventive, it is often not the most efficient solution. This is because the runtime environment has to store the data of missed function calls during execution. In a deep recursion, the fixed-sized portion of the main memory allocated to this call stack may run out.
-

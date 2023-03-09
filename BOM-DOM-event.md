@@ -42,32 +42,6 @@ console.log(answer);
 
 ##### Task: Try the prompt function in the browser console.
 
-## Timing of functions
-### [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
-The `setTimeout ()` function can be used to call a function once after a certain time.
-```javascript
-function printSomething(param) {
-  console.log(param);
-}
-
-setTimeout(printSomething, 2000, 'This will be printed');
-```
-* the above code creates a function `printSomething` that is run using the` setTimeout () `method after two seconds. The time is given in milliseconds.
-
-### [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
-The `setInterval()` function can be used to call a function at specified intervals. The `setInterval()` function returns the `interval ID`, which allows the interval to be stopped later by calling the `clearInterval ()` function
-```javascript
-function sayHello() {
-  console.log('Hello');
-}
-
-const interval = setInterval(sayHello, 1000);
-```
-* the above code creates a `sayHello` function that is run every second using the` setInterval()` function. The time is given in milliseconds. To stop that interval, use the following command:
-```javascript
-clearInterval(interval);
-```
-
 ## [navigator-interface](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
 The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) returns the gps coordinates of the device:
 ```html
@@ -160,27 +134,9 @@ document.getElementById ('logo') // retrieves an element with a specific id from
 element.getElementsByTagName ("p") // retrieves all p-elements from the selected element
 element.appendChild (child) // add child node to element
 element.removeChild (child) // removes the child node from the element
-```
-Because the Document interface inherits [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) and [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-interfaces, in fact, the main features come from them as well as from the [ParentNode](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode) interface:
-```javascript
-elem.innerHTML // The HTML code contained in the element
-elem.innerText // The text contained in the element
-elem.nodeName // element type
-elem.nodeValue // element value
-elem.parentNode // element's parent node
-elem.childNodes // element's child node
-elem.children // child nodes of the element
-elem.firstChild // first child node of the element
-elem.lastChild // last child node of the element
-elem.attributes // attributes of the element
-```
-### Object collections
-You can also select element collections from a document:
-```javascript
-document.forms // retrieves all form elements
-document.images // retrieves all image elements
-document.links // retrieves all area and a elements with the href attribute
-document.scripts // retrieves all script elements
+
+element.innerHTML // The HTML code contained in the element
+element.innerText // The text contained in the element
 ```
 
 ## Examples
@@ -311,9 +267,6 @@ document.querySelector('#paragraph').classList.replace('red', 'blue');
 ```
 For more methods for handling class attributes, see [classList documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
 
-### Sanitize innerHTML (extra)
-`innerHTML` property could be used for Cross Site Scripting attacks. [Here is an article on how to prevent it.](https://gomakethings.com/how-to-sanitize-third-party-content-with-vanilla-js-to-prevent-cross-site-scripting-xss-attacks/)
-
 # Event handling
 Because JavaScript is used to add interactivity to a website, there is a need for some way to respond to actions and events performed by the user or on the system.This method is called [event handling.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 
@@ -437,43 +390,4 @@ form.addEventListener('submit', function(evt) {
     p.innerText = `Your name is ${fname.value} ${lname.value}`;
 });
 </script>
-```
-
-### Callback functions and callback hell
-_(Extra)_
-
-Callbacks are functions passed as an argument to another function to be executed once an event has occurred or a certain task is complete, often used in asynchronous code. Callback functions are invoked later by a piece of code but can be declared on initialization without being invoked.
-
-As an example, event listeners are asynchronous callbacks that are only executed when a specific event occurs.
-```javascript
-function clickHandler() {
-  console.log('The user clicked on the page.');
-}
-document.addEventListener('click', clickHandler);
-```
-#### Callback hell
-Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
-```javascript
-getData(function(a) {
-  getMoreData(a, function(b) {
-    getMoreData(b, function(c) {
-      getMoreData(c, function(d) {
-        getMoreData(d, function(e) {
-          // ...
-        })
-      })
-    })
-  })
-})
-```
-Refactoring the functions to return promises and using async/await can sometimes be a solution.
-```javascript
-async function asyncAwaitVersion() {
-  const a = await getData()
-  const b = await getMoreData(a)
-  const c = await getMoreData(b)
-  const d = await getMoreData(c)
-  const e = await getMoreData(d)
-  // ...
-}
 ```

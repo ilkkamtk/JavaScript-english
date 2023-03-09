@@ -23,3 +23,7 @@
    1. Section 1: 1-6 
    2. Section 2: 7-10 
    3. Section 3: 27-30
+
+### Extra material
+[Some voluntary reading
+](extras.md)

@@ -14,34 +14,11 @@ Open application programming interfaces are plentiful and most of them are well 
 
 A very handy tool for testing is [Postman](https://www.postman.com/downloads/). It allows interfaces on the Internet to be tested without writing a single line of code.
 
-## HTTP-protocol
-Most of the open APIs are implemented with the REST architecture model based on the HTTP protocol, which is why they are often referred to as RESTful web services.
-The REST architecture uses HTTP methods to tell the system whether you want to read, add, or edit data, for example. In order to use open interfaces / RESTful services, it is good to know the basics of the HTTP protocol:
-
-[Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-
-### HTTP methods
-HTTP defines query methods that tell the server what kind of function it wants to perform.
-The most commonly used methods are:
-
-* GET
-    * is usually used to request a specific resource or data
-* POST
-    * used to add data or even a file
-* PUT
-    * used to replace an old record with a new one
-* DELETE
-    * used to delete a record
-* PATCH
-    * used to update part of the record data
-
-The documentation of the used API explains which method and which parameters and HTTP headers should be used in different situations.
-
 ### An example application that uses the OpenChargeMap interface
 - [Source code](https://github.com/ilkkamtk/sahkoauto)
 - [Link to the app](https://users.metropolia.fi/~ilkkamtk/sahkoauto/)
 
-### More examples, e.g. for the project
+### Some examples of using APIs
 - [Link](api-esimerkit/README.md)
 
 # AJAX - Asynchronous JavaScript and XML
@@ -170,7 +147,7 @@ The example above describes an array (square brackets []) that contains two obje
 A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
 ![Promise flowchart](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png)
 
-In newer versions of JavaScript, promise is increasingly used instead of [callback functions](#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
+In newer versions of JavaScript, promise is increasingly used instead of [callback functions](extras.md#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
 The advantages of the promise are e.g. simpler syntax and easier error handling. For example, to submit a form using the fetch method:
 ```html
 <form>
@@ -216,35 +193,8 @@ document.addEventListener('submit', async function(evt) {
 
 
 ## [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. Same image search example as before, now implemented with the older syntax of fetch() function:
-```html
-<figure>
-    <img>
-    <figcaption></figcaption>
-</figure>
+Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. 
 
-<script>
-    
-    fetch('pics.json')              // The download is started. The default method is GET.
-    .then(function(response){       // When the download is complete,
-      return response.json();       // convert the loaded text JSON to a JavaScript object / array
-    }).then(function(json){         // Then the downloaded data is received and
-      showPics(json);               // call the showPics function and send the loaded data to it as an argument.
-    }).catch(function(error){       // If an error occurs,
-      console.log(error);           // log the error to the console.
-    });                
-    
-    function showPics(images) {
-        const name = images[1].name;     // the 'name' property of the second object in the 'images' array
-        const description = images[1].description; // 'description' property of the second object object in the 'images' array
-        const address = images[1].address; // 'address' property of the second object object in the 'images' array
-
-        document.querySelector('img').src = address;
-        document.querySelector('img').alt = name;
-        document.querySelector('figcaption').innerText = description;
-     }
-</script>
-```
 The ES8 version of JavaScript introduced the syntax of [async / await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) error handling.
 ```html
 <figure>
@@ -273,23 +223,3 @@ The ES8 version of JavaScript introduced the syntax of [async / await](https://d
     showPics();
 </script>
 ```
-
-## Fixing CORS errors
-
-Some open APIs cause [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors) errors. They can be bypassed by a proxy server like e.g. allOrigins: https://allorigins.win/.
-
-### Guide:
-
-1. Add a variable before the fetch command: `const proxy = 'https://api.allorigins.win/get?url=';`
-2. Add another variable after the previous line, where you store the address of the interface with its parameters: `const search = 'https://open-api.myhelsinki.fi/v2/places/?tags_search=accommodation'`;
-3. Combine the above: `const url = proxy + encodeURIComponent(search);`
-4. Perform the search:
-
-```javascript
-const response = await fetch(url);
-const result = await response.json();
-console.log(result.contents);
-const dataFromAPI = JSON.parse(result.contents);
-```
-
-5. Note that allOrigins puts the API's response inside the `contents` property. Contents is just text, so it still needs to be converted into an array/object using the JSON.parse() function.

@@ -17,7 +17,7 @@ Completed assignments:
 Total 11p
 
 ****
-You can choose which tasks you want to do. However, the maximum score for each module is 20 points. 8 points/module are required to pass.
+You can choose which tasks you want to do. However, the maximum score for each module is 16 points. 40% if points is required to pass.
 
 ## Module 1. Interactive programs + Conditional expressions and loops
 1. Write a program that [logs to the console](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#console-log) this text: `I'm printing to console!` (**1p**)
@@ -201,46 +201,20 @@ You can choose which tasks you want to do. However, the maximum score for each m
 <sub id="modal"><sup>- A modal is a dialog box/popup window that is displayed on top of the current page</sup></sub>
 
 ## Module 4. AJAX
-Make an app that retrieves information about a TV series you enter and displays it on a web page.
-- API to use: [TVMaze API](http://www.tvmaze.com/api#show-search)
-- Requirements:
-   - Step 1: Print the search result to the console (**3p**)
-   - Step 2: Print one set of search results on a web page (**4p**)
-      - required information: Name, link to details (url), medium image and summary
-      - add the link to `<a>` element. Also add `target="_blank"` to the link.
-   - Step 3: Print the same information for all series from the search result on the web page as above (**9p**)
-      - in addition, the genres to which the series belongs are printed
-         - use `|` character (or similar, but no comma) to separate the genres
-      - if TV series has no image, use default image
-         - example default image: https://via.placeholder.com/100x200?text=text+here
-      - you can comment out steps 1 and 2 at this point
-   - Step 4: Stylish layout with CSS and valid HTML (**4p**)
-      - you'll probably need at least 5-10 CSS rules to make a proper layout
-   - Step 5: show the link to details (url) in an [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) element which is inside a modal (`<dialog>`) 
-- First, make a valid HTML page with a search form. Example form:
-```html
-<form action="https://api.tvmaze.com/search/shows">
-    <input id="query" name="q" type="text">
-    <input type="submit" value="Search">
-</form>
-```
-- Test the form. The result should be a page full of JSON formatted data.
-- Add JavaScript file.
-- Add a submit event to the form to launch the search.
-- To search, you need to get the value of the 'q' field, which is then sent to the API using fetch.
-- There are likely to be multiple TV series in the search result, so make a for loop for printing the HTML needed to display the data
-- Data in some series may be missing, for example, the `image` object. In that case, the value of that property is _null_. This might cause an error and the script will stop running. Try to make the script tolerant of the above errors. For example, you can use the if statement to check if the value of a variable is null, or you can use the [conditional operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
-   - You can try this with the keyword 'dome', for example. It returns 10 TV series from the API, but a show called 'Battle Dome' is missing `image`.
-- Grading:
-   - HTML not valid: 1p deduction for each error (warnings are not errors)
-   - Default font: 1p deduction
-   - Bad contrast (poor choise of colors): 1 - 2p deduction
-   - No padding, margin, hard to read: 1p deduction for each
-   - No error handling (all results are not displayed): 4p deduction
-   - Missing information: 1p deduction for each
-   - No default image: 2p deduction
-   - Links not working: 1p deduction
-   - Search results are not cleared when a new search is made: 1p deduction
-   - Comma `,` between genres: 1p deduction
-   - Search form is not styled: 1-2p deduction
-   - url does not open in a modal: 2p deduction
+1. Make an app that retrieves information about a TV series you enter and displays it in the console. (**2p**)
+   - API to use: [TVMaze API](http://www.tvmaze.com/api#show-search)
+   - First, make a valid HTML page with a search form. Example form:
+   ```html
+   <form action="https://api.tvmaze.com/search/shows">
+     <input id="query" name="q" type="text">
+     <input type="submit" value="Search">
+   </form>
+   ```
+   - Test the form. The result should be a page full of JSON formatted data.
+2. Develop the app further.
+   - Add JavaScript that gets the value entered to the form and sends a request with [fetch]() to `https://api.tvmaze.com/search/shows?q=${value_from_input}`. Print the search result to the console. (**3p**)
+3. Develop the app even further. Print the following information for all series from the search result on the web page. (**6p**)
+   - required information: Name, link to details (url), medium image and summary
+   - add the link to `<a>` element. Also add `target="_blank"` to the link.
+   - show the medium image with `<img src="" alt="">`. Add medium image to `src` attribute and name property to `alt` attribute.
+4. 

@@ -218,8 +218,11 @@ You can choose which tasks you want to do. However, the maximum score for each m
    - show the name in `<h2>` element
    - show the url in `<a>` element. Also add `target="_blank"` to the link.
    - show the medium image with `<img src="" alt="">`. Add medium image to `src` attribute and name property to `alt` attribute.
-   - show summary in `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`. 
-4. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
+   - some TV-shows don't have images. This will cause an error. You can fix this by adding ? operator to `image` property. Example: `tvShow.show.image?.medium;`. This is called [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+   - show summary in `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`.
+   - collect the elements to `<article>` elements and append `<article>` elements to the HTML document.
+4. Develop the app even further. Optional chaining is not the best way to handle missing image. Use [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) or if/else to add a default image if TV-show is missing image property. (**2p**)
+5. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
     - API to use: [chucknorris.io](https://api.chucknorris.io/)
     - Send a request to `https://api.chucknorris.io/jokes/random` and print only the joke to the console (that would be the 'value' property)
     - No need to add a form.

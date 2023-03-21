@@ -215,10 +215,10 @@ You can choose which tasks you want to do. However, the maximum score for each m
    - Add JavaScript that gets the value entered to the form and sends a request with [fetch](apit-ajax.md#here-is-the-same-example-but-this-time-the-airport-code-is-entered-by-using-a-form) to `https://api.tvmaze.com/search/shows?q=${value_from_input}`. Print the search result to the console. (**3p**)
 3. Develop the app even further. Print the following information for all series from the search result on the web page. (**6p**)
    - required information: Name, link to details (url), medium image and summary
-   - add the name to `<h2>` element
-   - add the link to `<a>` element. Also add `target="_blank"` to the link.
+   - show the name in `<h2>` element
+   - show the url in `<a>` element. Also add `target="_blank"` to the link.
    - show the medium image with `<img src="" alt="">`. Add medium image to `src` attribute and name property to `alt` attribute.
-   - add summary to `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`. 
+   - show summary in `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`. 
 4. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
     - API to use: [chucknorris.io](https://api.chucknorris.io/)
     - Send a request to `https://api.chucknorris.io/jokes/random` and print only the joke to the console (that would be the 'value' property)

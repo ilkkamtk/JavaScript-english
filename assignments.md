@@ -225,7 +225,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
    - clear the old results with `innerHTML = ''` before you append the new results.
 4. Develop the app even further. Optional chaining is not the best way to handle missing image. Use [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) or if/else to add a default image if TV-show is missing image property. (**2p**)
    - You can use `https://via.placeholder.com/210x295?text=Not%20Found` as the default image.
-6. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
+5. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
     - API to use: [chucknorris.io](https://api.chucknorris.io/)
     - Send a request to `https://api.chucknorris.io/jokes/random` and print only the joke to the console (that would be the 'value' property)
     - No need to add a form.
@@ -244,5 +244,6 @@ You can choose which tasks you want to do. However, the maximum score for each m
    - You need to have a form where user adds an address. After the form is submitted, the route is displayed on a map. Show also the starting and ending time of the trip. _Not_ each part, just the start and end times.
    - Example: [JS](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/js/esim4.js), [HTML](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/esim4.html)
       - You'll need [this Leaflet plugin](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/js/Polyline.encoded.js) to make the example work.
-   - [Here is an example](https://digitransit.fi/en/developers/apis/1-routing-api/itinerary-planning/#basic-route-from-kamppi-helsinki-to-pisa-espoo) on how to use places/addresses instead of coordinates.
-   - If you get cors errors [use this fix](https://github.com/ilkkamtk/corsfix).
+   - [Here is an example](https://digitransit.fi/en/developers/apis/1-routing-api/itinerary-planning/#basic-route-from-kamppi-helsinki-to-pisa-espoo) on how to use places/addresses with coordinates.
+      - To get coordinates from address, you can use [address search ](https://digitransit.fi/en/developers/apis/2-geocoding-api/address-search/)
+   - If you get cors errors (which is likely _not_ going to happen) [use this fix](https://github.com/ilkkamtk/corsfix).

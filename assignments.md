@@ -212,9 +212,31 @@ You can choose which tasks you want to do. However, the maximum score for each m
    ```
    - Test the form. The result should be a page full of JSON formatted data.
 2. Develop the app further.
-   - Add JavaScript that gets the value entered to the form and sends a request with [fetch]() to `https://api.tvmaze.com/search/shows?q=${value_from_input}`. Print the search result to the console. (**3p**)
+   - Add JavaScript that gets the value entered to the form and sends a request with [fetch](apit-ajax.md#here-is-the-same-example-but-this-time-the-airport-code-is-entered-by-using-a-form) to `https://api.tvmaze.com/search/shows?q=${value_from_input}`. Print the search result to the console. (**3p**)
 3. Develop the app even further. Print the following information for all series from the search result on the web page. (**6p**)
    - required information: Name, link to details (url), medium image and summary
+   - add the name to `<h2>` element
    - add the link to `<a>` element. Also add `target="_blank"` to the link.
    - show the medium image with `<img src="" alt="">`. Add medium image to `src` attribute and name property to `alt` attribute.
-4. 
+   - add summary to `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`. 
+4. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
+    - API to use: [chucknorris.io](https://api.chucknorris.io/)
+    - Send a request to `https://api.chucknorris.io/jokes/random` and print only the joke to the console (that would be the 'value' property)
+    - No need to add a form.
+5. Develop the app further (**4p**).
+    - Now add a form where you can enter a search term like in assignments 1-3
+    - Send the search term to `https://api.chucknorris.io/jokes/search?query=${value_from_input}` using `fetch()`
+    - Print each joke in this format:
+    ```html
+    <article>
+        <p>Joke here<p>
+    </article>
+    ``` 
+6. Advanced. Routing with (digitransit)[https://digitransit.fi/en/developers/apis/1-routing-api/]  (**16p**)
+   - **Not for the faint-hearted**. Don't do this if it interferes with project. It's not worth it.
+   - Create an app that shows the route from user defined address to school (Karaportti 2).
+   - You need to have a form where user adds an address. After the form is submitted, the route is displayed on a map. Show also the starting and ending time of the trip. _Not_ each part, just the start and end times.
+   - Example: [JS](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/js/esim4.js), [HTML](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/esim4.html)
+      - You'll need [this Leaflet plugin](https://github.com/ilkkamtk/JavaScript-english/blob/main/api-esimerkit/js/Polyline.encoded.js) to make the example work.
+   - [Here is an example](https://digitransit.fi/en/developers/apis/1-routing-api/itinerary-planning/#basic-route-from-kamppi-helsinki-to-pisa-espoo) on how to use places/addresses instead of coordinates.
+   - If you get cors errors [use this fix](https://github.com/ilkkamtk/corsfix).

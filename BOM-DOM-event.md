@@ -169,9 +169,18 @@ element.innerText // The text contained in the element
 3. Iterate all `<li>` elements using the forEach function and make the text bold. ([forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) is a modern alternative to for...of)
    ```javascript
         const bullets = document.querySelectorAll('li');
+        
+        for (let bullet of bullets) {
+            bullet.innerHTML = `<b>${bullet.innerHTML}</b>`;
+        }
+        
+        
+        // alternative syntax using array.forEach()
+        /*
         bullets.forEach(function (bullet) {
           bullet.innerHTML = `<b>${bullet.innerHTML}</b>`;
         })
+        */
    ```
 
 4. List of all p-elements that have "bulletin" class:

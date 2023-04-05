@@ -27,6 +27,7 @@ function getStopsByCoordinates(crd, dist) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'digitransit-subscription-key': 'your key here',
     },
     body: JSON.stringify({query: GQLQuery}),
   };

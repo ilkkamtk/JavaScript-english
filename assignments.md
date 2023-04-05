@@ -238,7 +238,7 @@ You can choose which tasks you want to do. However, the maximum score for each m
         <p>Joke here<p>
     </article>
     ``` 
-7. Advanced. Routing with (digitransit)[https://digitransit.fi/en/developers/apis/1-routing-api/]  (**16p**)
+7. Advanced. Routing with [digitransit](https://digitransit.fi/en/developers/apis/1-routing-api/)  (**16p**)
    - **Not for the faint-hearted**. Don't do this if it interferes with project. It's not worth it.
    - Create an app that shows the route from user defined address to school (Karaportti 2).
    - You need to have a form where user adds an address. After the form is submitted, the route is displayed on a map. Show also the starting and ending time of the trip. _Not_ each part, just the start and end times.

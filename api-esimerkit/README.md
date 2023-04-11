@@ -30,5 +30,5 @@
   * Events
   * Museums
   * etc...
-* https://www.programmableweb.com/content/search
+* https://rapidapi.com/hub
 * https://www.avoindata.fi/en

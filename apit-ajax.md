@@ -7,7 +7,7 @@ The API is kind of an interpreter between two different systems. For example, th
 [Watch this video](https://www.youtube.com/watch?v=dStT9v5y6Tc)
 
 The open application programming interface is a kind of data warehouse that can be read over the Internet. The open application programming interface can be a data-only interface that can only read data (e.g. [OpenWeatherMap](https://openweathermap.org/current)) or a functional interface that can also be used to store and edit data (e.g. [Open311](http://dev.hel.fi/apis/open311/)).
-* [List of open application programming interfaces](https://www.programmableweb.com/category)
+* [List of open application programming interfaces](https://rapidapi.com/hub)
 * [List of Finnish open application programming interfaces](https://www.avoindata.fi/fi)
 
 Open application programming interfaces are plentiful and most of them are well documented today. Many of the interfaces require some form of registration before they can be used. In addition, they can be tested before implementation.

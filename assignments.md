@@ -17,7 +17,7 @@ Completed assignments:
 Total 11p
 
 ****
-You can choose which tasks you want to do. However, the maximum score for each module is 16 points. 40% if points is required to pass.
+You can choose which tasks you want to do based on your skill level. 8 points from each set is required to pass.
 
 ## Module 1. Interactive programs + Conditional expressions and loops
 1. Write a program that [logs to the console](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#console-log) this text: `I'm printing to console!` (**1p**)

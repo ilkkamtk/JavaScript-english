@@ -215,7 +215,7 @@ Heads: 53, tails: 47
 ```
 Because the results of a coin toss are determined randomly, the result figures vary from run to run.
 
-The while structure can be used to respond to an invalid user input and require the user to re-enter the input until it is valid.Esimerkiksi seuraava ohjelma tarkistaa, että käyttäjän syöttämä paino oli positiivinen.
+The while structure can be used to respond to an invalid user input and require the user to re-enter the input until it is valid. For example, the following program checks that the weight entered by the user is positive.
 
 Execution of the program cannot proceed until the user has entered a valid weight.
 

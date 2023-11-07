@@ -297,7 +297,7 @@ Numerical values can also be generated using a random number generator.
 ### Basic calculations
 
 The basic JavaScript calculations are:
-- sumamtion (`+`)
+- summation (`+`)
 - subtraction (`-`)
 - multiplication (`*`)
 - division (`/`)

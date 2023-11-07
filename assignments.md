@@ -189,11 +189,10 @@ You can choose which assignments you want to do based on your skill level. 8 poi
    ```
     - [Check assignment](https://js-checker.azurewebsites.net/#/student/64524f3e9e9d273d01b2c87f)
 6. Open `t6` folder in your IDE/editor. Make a script that opens an alert window that says 'Button Clicked' when the `<button>` element is clicked. (**1p**)
-    - [Check assignment](https://js-checker.azurewebsites.net/#/student/64524f3e9e9d273d01b2c885)
 7. Open `t7` folder in your IDE/editor. Make a hover effect with JavaScript. (**2p**)
    - when user mouses over `<p id="trigger">` change the picture of `<img id="target">` form `picA.jpg` to `picB.jpg`
    - when user mouses off, change the picture back to original
-   - [Check assignment](https://https://js-checker.azurewebsites.net/#/assignments/64524f3e9e9d273d01b2c88b)
+   - [Check assignment](https://js-checker.azurewebsites.net/#/student/64524f3e9e9d273d01b2c88b)
 8. Open `t8` folder in your IDE/editor. Make a simple calculator. (**4p**)
    - There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
    - Use the value attribute of `<option>` elements to decide which operation the calculator needs to do. [Example.](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_value2)
@@ -224,9 +223,10 @@ You can choose which assignments you want to do based on your skill level. 8 poi
     - the same time you are opening the modal, you should put the large image to the `<img>` in the modal. 
     - Don't forget to add `alt` attribute.
     - use `<span>` inside `<dialog>` to close the modal.
+    - [Check assignment](https://js-checker.azurewebsites.net/#/student/64524f3f9e9d273d01b2c8a3)
 <hr>
 <sub id="modal"><sup>- A modal is a dialog box/popup window that is displayed on top of the current page</sup></sub>
-    - [Check assignment](https://https://js-checker.azurewebsites.net/#/assignments/64524f3f9e9d273d01b2c8a3)
+    
 
 ## Module 4. AJAX
 1. Make an app that retrieves information about a TV series you enter and displays it in the console. (**2p**)

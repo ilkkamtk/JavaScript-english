@@ -26,7 +26,7 @@ If the condition is false, the conditional part is not executed. For example, wi
 ## Comparison operators
 
 Comparison operators are usually needed to express a condition in a conditional statement. The following comparison operators are used in JavaScript:
-- equal to (`==`)
+- equal to (`==`) or (`===`) 
 - different than (`! =`)
 - greater than (`>`)
 - greater than or equal to (`> =`)

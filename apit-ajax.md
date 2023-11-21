@@ -36,7 +36,7 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
 
     function synchronousFunction() {
       let number = 1;
-      for(let i = 1; i < 1000000; i++){
+      for(let i = 1; i < 100000; i++){
         number += i;
         console.log('synchronousFunction running');
       }

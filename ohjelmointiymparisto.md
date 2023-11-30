@@ -12,11 +12,11 @@ To get started writing programs, follow these steps:
 2. Add a new directory for each module when you are doing the assignments. 
 ### Setting code style
 1. Set the code style so that the automatic code formatting works as desired
-    1. Open File / Settings (win) or PyCharm / Preferences (mac)
-    2. Select Languages & Frameworks / JavaScript on the left and check that ECMAScript 6 is selected and check 'Prefer strict mode' if it is an option.
+    1. Open File / Settings (win) or PyCharm / Settings (mac)
+    2. Select Languages & Frameworks / JavaScript on the left and check that ECMAScript 6+ is selected.
     3. Select Editor / Code Style on the left. Clicking on the CodeStyle triangle opens a list of languages. Select JavaScript
     4. On the right is the link 'Set from'. Select 'Google JavaScript Style Guide.' Now you can format the code automatically with _alt-ctrl-l_ or _alt-cmd-l_
-    5. Open File / New Project Setup / Preferences for New Projects for new projects and redo steps iii and iv so that all new projects have the same settings.
+    5. Open File / New Project Setup / Settings for New Projects for new projects and redo steps iii and iv so that all new projects have the same settings.
 2. Add an HTML file to the project with the name you want, say `example.html`.
 3. Set the program code below to the contents of the file. The actual JavaScript code here consists of a single `console.log()` statement that prints the text `Hello, world!`.
    You can replace it with the program of your choice.

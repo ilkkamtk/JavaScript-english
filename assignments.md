@@ -19,7 +19,8 @@ Completed assignments:
 **Total 11p**
 
 ****
-You can choose which assignments you want to do based on your skill level. 8 points from each module is required to pass.
+You can choose which assignments you want to do based on your skill level.
+
 
 ## Module 1. Interactive programs + Conditional expressions and loops
 1. Write a program that [logs to the console](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#console-log) this text: `I'm printing to console!` (**1p**) 

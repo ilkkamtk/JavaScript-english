@@ -120,7 +120,7 @@ The webpage you open looks like this in your browser:
 ![tulostus sivun sisällöksi](img/sivunsisalloksi.png)
 
 In practice, software outputs are usually collected in their own functions, which are called as a result of some event, for example
-pressing a button on a web page. This printing method requires the understandig of function and a document object model concepts, so it will not be discussed further in this context.
+pressing a button on a web page. This printing method requires the understanding of function and a document object model concepts, so it will not be discussed further in this context.
 
 From now on, the examples use mostly the console printing option, the `console.log()` method.
 

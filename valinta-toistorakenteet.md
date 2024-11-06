@@ -104,7 +104,7 @@ If you always want to end up with an outcome, write the last branch as the `else
             console.log('The number is positive.');
         }
         else if (number < 0) {
-            console.log('The number is positive.');
+            console.log('The number is negative.');
         }
         else {
                 console.log('That number is zero.');

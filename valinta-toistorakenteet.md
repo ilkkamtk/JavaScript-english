@@ -282,6 +282,7 @@ for (;;) {
   console.log(name);
 }
 ```
+   - You can do this, but it is not recommended. Use an actual while loop instead.
 
 ## Nested loop structures
 

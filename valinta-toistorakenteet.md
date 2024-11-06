@@ -27,9 +27,9 @@ If the condition is false, the conditional part is not executed. For example, wi
 
 Comparison operators are usually needed to express a condition in a conditional statement. The following comparison operators are used in JavaScript:
 - equal to (`==`) or (`===`) 
-- different than (`! =`)
+- different than (`!=`)
 - greater than (`>`)
-- greater than or equal to (`> =`)
+- greater than or equal to (`>=`)
 - less than (`<`)
 - less than or equal to (`<=`)
 - 
@@ -56,7 +56,7 @@ Loogisia lausekkeita voidaan liittää loogisten operaattoreiden avulla.
 For example, the following program indicates if the integer entered by the user is both even and greater than 10:
 ```javascript
         const number = prompt('Enter and integer');
-        if (number % 2 == 1 && number > 10) {
+        if (number % 2 === 0 && number > 10) {
             console.log('You entered an even number greater than 10');
         }
 ```
@@ -71,7 +71,7 @@ The following example indicates whether the integer entered by the user is even 
 
 ```javascript
         const number = prompt('Enter an integer');
-        if (number % 2 == 0) {
+        if (number % 2 === 0) {
             console.log('You entered an even number');
         }
         else {

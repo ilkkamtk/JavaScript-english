@@ -131,7 +131,7 @@ console.log(student[chosenProperty]);
 The definition of an object literal can also contain functions. The example below creates an object for which the remaining number of credits required for the degree is calculated using a function. Finally, that credit is printed.
 
 ```javascript
-let student2 = {
+const student2 = {
       firstName: 'Ahmed',
       lastName: 'Hussein',
       credits :175,

@@ -214,7 +214,7 @@ element.innerText // The text contained in the element
        const html =                                             // to make a multiline string, note the backtick around the string
                `<p>
                    Here is some of text with a picture.
-                   <img src="http://placekitten.com/321/241" alt="Cat">
+                   <img src="https://via.placeholder.com/320" alt="Cat">
                 </p>`;
        div.innerHTML = html;                                      // sets the string 'html' to the HTML content of the selected element
        </script>
@@ -227,7 +227,7 @@ element.innerText // The text contained in the element
            const div = document.querySelector('#example');       // get element whose id is 'example'
     
            const i = document.createElement('img');                // create img element
-           i.src = 'http://placekitten.com/321/241';               // set src attribute
+           i.src = 'https://via.placeholder.com/320';               // set src attribute
            i.alt = 'Cat';                                        // set alt attribute
            
            const t = document.createTextNode('Here is some of text with a picture.');  // create text node

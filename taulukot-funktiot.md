@@ -43,7 +43,7 @@ Note that you do not need to know the size of the array when creating the array.
 Once created, the desired number of items can be added to the array.
 
 The size of the array is determined by the largest index used. The size is one larger than the largest index.
-The size of the `numbers` array is obtained from the` numbers.length` expression, if necessary.
+The size of the `numbers` array is obtained from the `numbers.length` expression, if necessary.
 
 ## Looping an array
 
@@ -255,14 +255,14 @@ The function in the program below performs the calculation of the quadratic sum.
 ## Visibility of variables
 With the introduction of functions, it is necessary to consider the visibility of variables.
 
-In previous examples, variables defined by the `let` and` const` keywords have been used. They are available (or visible) in the part of the program (code block) where they are defined - as well as in the code blocks inside it. When the word `let` (or `const`) defines a variable in the main program (outside the functions), it becomes a global variable that is available throughout the program.
+In previous examples, variables defined by the `let` and `const` keywords have been used. They are available (or visible) in the part of the program (code block) where they are defined - as well as in the code blocks inside it. When the word `let` (or `const`) defines a variable in the main program (outside the functions), it becomes a global variable that is available throughout the program.
 
 The global variable can also be defined outside the functions with the `var` statement.
 
 Within a function, the variables defined by the `var` statement are local variables of the function.
 The local variable of a function appears everywhere in the function in which it is defined.
 
-Consider an example that illustrates the differences in visibility between the variables defined by the `var` and` const` statements:
+Consider an example that illustrates the differences in visibility between the variables defined by the `var` and `const` statements:
 ```javascript
         const n1 = 3; // global variable
 

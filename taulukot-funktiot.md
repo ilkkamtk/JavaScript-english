@@ -108,7 +108,7 @@ const student = {
 }
 ```
 
-Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstName` or `student["firstName"] `.
+Properties can be referred to by alternative notations. For example, a student's first name is given by `student.firstName` or `student["firstName"]`.
 ```javascript
 const greeting = `Hello, my name is ${student.firstName} ${student.lastName}`;
 const studentInfo = `student number: ${student['studentId']}, phone number: ${student['phone']}`
@@ -379,7 +379,7 @@ Let's write the quadratic calculating function in the previous exam this time as
 
 In this representation, a descending, unnamed function of the quadratic sum seems to be placed as the value of a constant named `quadraticSum`.
 
-The parameters (in this case `a` and` b`) are listed before the arrow operator, and the return value is the quadratic sum of the numbers.
+The parameters (in this case `a` and `b`) are listed before the arrow operator, and the return value is the quadratic sum of the numbers.
 
 The arrow function is called in the same way as a function written with the `function` keyword.
 

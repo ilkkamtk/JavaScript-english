@@ -115,7 +115,7 @@ The HTML DOM is a standard that defines how HTML elements are selected, edited, 
     </body>
 </html>
 ```  
-The p-element selected in the example above is stored as an element object (or element node) in a variable called 'paragraph'. The 'paragraph' object can then be manipulated using the properties and methods of the [Document] (https://developer.mozilla.org/en-US/docs/Web/API/Document) interface.
+The p-element selected in the example above is stored as an element object (or element node) in a variable called 'paragraph'. The 'paragraph' object can then be manipulated using the properties and methods of the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface.
 
 ## Parent/child
 ![DOM](https://www.w3schools.com/js/pic_htmltree.gif)
@@ -270,7 +270,7 @@ Edit the Class attribute:
 <script>
 // Toggle red on or off
 document.querySelector('#paragraph').classList.toggle('red');
-// Replace blue with red
+// Replace red with blue
 document.querySelector('#paragraph').classList.replace('red', 'blue');
 </script>
 ```

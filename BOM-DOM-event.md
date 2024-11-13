@@ -305,7 +305,7 @@ button.addEventListener('click', popup);
 ``` 
 Note that the popup function in addEventListener is missing parentheses This is because the popup function is used as an event handler and is not called immediately, but only when a 'click' occurs. If it had parentheses, the function would be started immediately.
 
-The event handler is also called a [callback function](#callback-functions-and-callback-hell).
+The event handler is also called a [callback function](https://github.com/ilkkamtk/JavaScript-english/blob/main/extras.md#callback-functions-and-callback-hell).
 
 The event handler receives an [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt) that contains information about the event, such as the type of event and its target. For example, `evt.currentTarget` returns the element that is the target of the event.
 In the example code above, this item is the `<button>` element.

@@ -1,5 +1,5 @@
 # Assignments
-Create a folder for each module and inside each module create folder for each assignment. Create one HTML- and JavaScript file for each assignment. File names should contain the assignment's number. All HTML should be valid. Submit links that point to the module folder in users.metropolia.fi (not indivdual files) and to the GitHub repo of your JavaScript assignments.
+Create a folder for each module and inside each module create folder for each assignment. Create one HTML- and JavaScript file for each assignment. File names should contain the assignment's number. All HTML should be valid. Submit links that point to the module folder in users.metropolia.fi (not individual files) and to the GitHub repo of your JavaScript assignments.
 ****
 ### Example submission:
 
@@ -16,11 +16,11 @@ Completed assignments:
 **Total 11p**
 
 ****
-You can choose which assignments you want to do based on your skill level. Try to do at least about 10 points worth of assignments (so at least 40%). The more points available in the assignment, the more challenging it is. 
+You can choose which assignments you want to do based on your skill level. Try to do at least about 10 points worth of assignments (so at least 40%). The more points available in the assignment, the more challenging it is.
 
 
 ## Module 1. Interactive programs + Conditional expressions and loops
-1. Write a program that [logs to the console](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#console-log) this text: `I'm printing to console!` (**1p**) 
+1. Write a program that [logs to the console](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#console-log) this text: `I'm printing to console!` (**1p**)
 
 2. Write a program that [prompts](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#feed-reading) for user's name and then greets the user. Print the result to [the HTML document](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#printing-into-a-web-page): `Hello, Name!` (**2p**)
 3. Write a program that prompts for three integers. The program prints the sum, product and average of the numbers to [the HTML document](https://github.com/ilkkamtk/JavaScript-english/blob/main/vuorovaikutteiset_ohjelmat.md#printing-into-a-web-page). (**3p**)
@@ -33,7 +33,7 @@ You can choose which assignments you want to do based on your skill level. Try t
    - The confirmation window can be displayed with the function [confirm()](https://github.com/ilkkamtk/JavaScript-english/blob/main/BOM-DOM-event.md#confirm). The function returns true if the user selects OK. If the user selects Cancel, the function returns false.
    - You cannot calculate the square root of a negative number. If the number entered by the user is negative, the program prints "The square root of a negative number is not defined" to the HTML document.
 7. Write a program that rolls user defined number of dice and displays the sum of the results of the dice rolls.(**2p**)
-   - First, program asks the user for the number of dice rolls. 
+   - First, program asks the user for the number of dice rolls.
    - Then the program throws a die as many times as the user defined.
    - Print the sum of the results in the console or in the HTML document.
 8. Write a program that prompts the user for the start and end year. The program prints all leap years from the interval given by the user. Printing is done in an unordered list to the HTML document. (**3p**)
@@ -66,7 +66,7 @@ You can choose which assignments you want to do based on your skill level. Try t
 
 ## Module 2. Arrays and functions
 1. Write a program that prompts the user for five numbers and prints them in the reverse order they were entered. Print the result to the console.(**2p**)
-   - Save the numbers to an array, then use for-loop to iterate in reverse order. 
+   - Save the numbers to an array, then use for-loop to iterate in reverse order.
    - Do not use array.reverse() function.
 2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in an ordered list (`<ol>`) in alphabetical order. (**2p**)
 3. Write a program that asks for the names of six dogs. The program prints dog names to unordered list `<ul>` in reverse alphabetical order. (**2p**)
@@ -84,9 +84,9 @@ You can choose which assignments you want to do based on your skill level. Try t
    - Print both the original array and the new array to the console in the main program after you have called the function.
    - You can hard code the array, no need for `prompt()`.
 10. Write a voting program as described below for small-scale meeting use. (**8p**)
-    - The program asks for the number of candidates. 
-    - Then the program asks for the names of the candidates: `'Name for candidate 1`
-    - Store the candidates' names and initial vote count in objects like this:
+    - The program asks for the number of candidates.
+    - Then the program asks for the names of the candidates: `Name for candidate 1`
+    - Store the candidates names and initial vote count in objects like this:
     ```javascript
     [
         {
@@ -104,7 +104,7 @@ You can choose which assignments you want to do based on your skill level. Try t
     ]
     ```
     - The program asks for the number of voters.
-    - The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
+    - The program asks each voter in turn who they will vote for. Voter should enter candidate name. If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
     - The program announces the name of the winner and the results by printing it to the console:
     ```text
     The winner is pamela with 3 votes.
@@ -132,7 +132,7 @@ You can choose which assignments you want to do based on your skill level. Try t
    <li>Third item</li>
    ```
    - Add class `my-list` to the element with `id="target"`
-2. Open `t2` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (**2p**)
+2. Open `t2` folder in your IDE/editor. Add HTML by using `createElement()` and `appendChild` methods. (**2p**)
    - Add the following HTML code to the element with `id="target"`
    ```html
    <li>First item</li>
@@ -147,7 +147,7 @@ You can choose which assignments you want to do based on your skill level. Try t
    <li>Paul</li>
    <li>Jones</li>
    ```
-4. Open `t4` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (**2p**)
+4. Open `t4` folder in your IDE/editor. Add HTML by using `createElement()` and `appendChild` methods. (**2p**)
    - Add the following HTML code to the element with `id="target"`. Add the values from 'students' array to the `<option>` elements in a for-loop.
    ```html
    <option value="2345768">John</option>
@@ -162,7 +162,7 @@ You can choose which assignments you want to do based on your skill level. Try t
       <h2>title_from_picArray</h2>
       <figure>
          <img src="medium_image_from_picArray" alt="title_from_picArray">
-         <figcaption>caption_from_picarray</figcaption>
+         <figcaption>caption_from_picArray</figcaption>
       </figure>
       <p>description_from_picArray</p>
    </article>
@@ -195,12 +195,12 @@ You can choose which assignments you want to do based on your skill level. Try t
     ```
     - picArray has two images for each item: medium and large. Medium is used in the `<img>` inside the `<article>` and large is used in the `<img>` inside the `<dialog>`.
     - use [showModal() and close()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods) functions to show and hide `<dialog>`
-    - the same time you are opening the modal, you should put the large image to the `<img>` in the modal. 
+    - the same time you are opening the modal, you should put the large image to the `<img>` in the modal.
     - Don't forget to add `alt` attribute.
     - use `<span>` inside `<dialog>` to close the modal.
 <hr>
 <sub id="modal"><sup>- A modal is a dialog box/popup window that is displayed on top of the current page</sup></sub>
-    
+
 
 ## Module 4. AJAX
 1. Make an app that retrieves information about a TV series you enter and displays it in the console. (**2p**)
@@ -223,7 +223,7 @@ You can choose which assignments you want to do based on your skill level. Try t
    - some TV-shows don't have images. This will cause an error. You can fix this by adding ? operator to `image` property. Example: `tvShow.show.image?.medium;`. This is called [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
    - show summary in `<div>` element (not `<p>`). This is because the summary is already in `<p>` element, and the result will not be valid if `<p>` is inside another `<p>`.
    - collect the elements to `<article>` elements and append `<article>` elements to the HTML document.
-      - make `<div id="results">` element to the HTML document where you append the `<article>` elements.  
+      - make `<div id="results">` element to the HTML document where you append the `<article>` elements.
    - clear the old results with `innerHTML = ''` before you append the new results.
 4. Develop the app even further. Optional chaining is not the best way to handle missing image. Use [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) or if/else to add a default image if TV-show is missing image property. (**2p**)
    - Use `https://via.placeholder.com/210x295?text=Not%20Found` as the default image.
@@ -239,7 +239,7 @@ You can choose which assignments you want to do based on your skill level. Try t
     <article>
         <p>Joke here<p>
     </article>
-    ``` 
+    ```
 7. Advanced. Routing with [digitransit](https://digitransit.fi/en/developers/apis/1-routing-api/)  (**16p**)
    - **Not for the faint-hearted**. Don't do this if it interferes with the project. It's not worth it.
    - Create an app that shows the route from user defined address to school (Karaportti 2).

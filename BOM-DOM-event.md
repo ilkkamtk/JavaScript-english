@@ -43,7 +43,7 @@ console.log(answer);
 ##### Task: Try the prompt function in the browser console.
 
 ## [navigator-interface](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
-The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) returns the gps coordinates of the device:
+The `navigator` interface can be used to retrieve information about the browser. For example, [navigator.geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) returns the gps coordinates of the device:
 ```html
 <!-- retrieving the user's location information and displaying it using OpenStreetMap and Leaflet.js -->
 <div id="map" style="width: 100%; height: 400px;"></div>
@@ -115,7 +115,7 @@ The HTML DOM is a standard that defines how HTML elements are selected, edited, 
     </body>
 </html>
 ```  
-The p-element selected in the example above is stored as an element object (or element node) in a variable called 'paragraph'. The 'paragraph' object can then be manipulated using the properties and methods of the [Document] (https://developer.mozilla.org/en-US/docs/Web/API/Document) interface.
+The p-element selected in the example above is stored as an element object (or element node) in a variable called 'paragraph'. The 'paragraph' object can then be manipulated using the properties and methods of the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface.
 
 ## Parent/child
 ![DOM](https://www.w3schools.com/js/pic_htmltree.gif)

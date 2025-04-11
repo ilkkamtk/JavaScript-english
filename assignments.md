@@ -132,7 +132,7 @@ You can choose which assignments you want to do based on your skill level. Try t
    <li>Third item</li>
    ```
    - Add class `my-list` to the element with `id="target"`
-2. Open `t2` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` mehtods. (**2p**)
+2. Open `t2` folder in your IDE/editor. Add HTML by using `createElement()` and `appenChild` methods. (**2p**)
    - Add the following HTML code to the element with `id="target"`
    ```html
    <li>First item</li>

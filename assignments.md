@@ -226,7 +226,7 @@ You can choose which assignments you want to do based on your skill level. Try t
       - make `<div id="results">` element to the HTML document where you append the `<article>` elements.  
    - clear the old results with `innerHTML = ''` before you append the new results.
 4. Develop the app even further. Optional chaining is not the best way to handle missing image. Use [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) or if/else to add a default image if TV-show is missing image property. (**2p**)
-   - Use `https://via.placeholder.com/210x295?text=Not%20Found` as the default image.
+   - Use `https://placehold.co/210x295?text=Not%20Found` as the default image.
 5. Make an app that retrieves a random Chuck Norris joke and displays it in the console. (**2p**)
     - API to use: [chucknorris.io](https://api.chucknorris.io/)
     - Send a request to `https://api.chucknorris.io/jokes/random` and print only the joke to the console (that would be the 'value' property)

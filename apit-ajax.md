@@ -114,12 +114,12 @@ XML is a markup language, like HTML. It is intended for storing and transferring
     <picture>
         <name> Sleeping cat </name>
         <description> In this picture, the cat is sleeping. </description>
-        <address> http://placekitten.com/321/241 </address>
+        <address> http://placecats.com/321/241 </address>
     </picture>
     <picture>
         <name> Lying cat </name>
         <Description> In this picture, the cat is lying. </Description>
-        <address> http://placekitten.com/421/251 </address>
+        <address> http://placecats.com/421/251 </address>
     </picture>
 </images>
 ```
@@ -134,12 +134,12 @@ JSON, or JavaScript Object Notation, is a popular markup language commonly used 
   {
     "name": "Sleeping cat",
     "description": "In this picture the cat is sleeping.",
-    "address": "http://placekitten.com/321/241"
+    "address": "http://placecats.com/321/241"
   },
   {
     "name": "Sleeping cat",
     "description": "In this picture the cat is lying.",
-    "address": "http://placekitten.com/421/251"
+    "address": "http://placecats.com/421/251"
   }
 ]
 ```

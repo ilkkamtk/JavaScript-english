@@ -249,7 +249,7 @@ The function in the program below performs the calculation of the quadratic sum.
         const num1 = prompt('Enter 1. number.');
         const num2 = prompt('Enter 2. number.');
         const quad = quadraticSum(num1, num2);
-        console.log('The quadratic sum of ' + luku1 + ' and ' + luku2 + ' is ' + ns);
+        console.log('The quadratic sum of ' + num1 + ' and ' + num2 + ' is ' + quad);
 ```
 
 ## Visibility of variables

@@ -322,17 +322,17 @@ The following operations can be used to change the value of a variable by one:
 
 
 You can also change the value more at once:
-- increment by constant (`+ =`)
-- reduction by constant (`- =`)
-- multiplication by constant (`* =`)
-- division by constant (`/ =`)
+- increment by constant (`+=`)
+- reduction by constant (`-=`)
+- multiplication by constant (`*=`)
+- division by constant (`/=`)
 
 ```javascript
         let number = 3;
         number *= 2;    // the value is now 6
         number /= 3;    // the value is now 2
         number += 7;   // the value is now 9
-        number -=8;    // the value is now 1
+        number -= 8;    // the value is now 1
         console.log(number);
 ```
 

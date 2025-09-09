@@ -270,7 +270,7 @@ Edit the Class attribute:
 <script>
 // Toggle red on or off
 document.querySelector('#paragraph').classList.toggle('red');
-// Replace blue with red
+// Replace red with blue
 document.querySelector('#paragraph').classList.replace('red', 'blue');
 </script>
 ```

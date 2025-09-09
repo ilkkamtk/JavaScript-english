@@ -117,7 +117,7 @@ const studentInfo = `student number: ${student['studentId']}, phone number: ${st
 Object literals are dynamic, so you can add and remove properties at any point (even if you use const). This is called mutating the object.
 ```javascript
 student.address = 'Schoolroad 7';  // adds 'address' property to previous example
-delete student.phone;              // deletes 'phone' propertt from previous example
+delete student.phone;              // deletes 'phone' property from previous example
 console.log(student);
 ```
 

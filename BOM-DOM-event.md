@@ -254,7 +254,7 @@ document.querySelector('#paragraph').style = "color: #eee; background-color: #22
 ```
 Edit the Class attribute:
 ```css
-/* extenal css-file */
+/* external css-file */
 .red {
     color: #f00;
 }
@@ -277,7 +277,7 @@ document.querySelector('#paragraph').classList.replace('red', 'blue');
 For more methods for handling class attributes, see [classList documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
 
 # Event handling
-Because JavaScript is used to add interactivity to a website, there is a need for some way to respond to actions and events performed by the user or on the system.This method is called [event handling.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+Because JavaScript is used to add interactivity to a website, there is a need for some way to respond to actions and events performed by the user or on the system. This method is called [event handling.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 
 For example, if a user clicks a button, we can respond by displaying an information box:
 ```html

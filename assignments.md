@@ -65,7 +65,7 @@ You can choose which assignments you want to do based on your skill level. Try t
 
 
 ## Module 2. Arrays and functions
-1. Write a program that prompts the user for five numbers and prints them in the reverse order they were entered. Print the result to the console.(**2p**)
+1. Write a program that prompts the user for five numbers and prints them in the reverse order they were entered (not reverse sorted). Print the result to the console.(**2p**)
    - Save the numbers to an array, then use for-loop to iterate in reverse order. 
    - Do not use array.reverse() function.
 2. Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in an ordered list (`<ol>`) in alphabetical order. (**2p**)

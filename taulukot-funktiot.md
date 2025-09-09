@@ -134,7 +134,7 @@ The definition of an object literal can also contain functions. The example belo
 const student2 = {
       firstName: 'Ahmed',
       lastName: 'Hussein',
-      credits :175,
+      credits: 175,
       hasLeft: function() {return 240-this.credits}
     }
 

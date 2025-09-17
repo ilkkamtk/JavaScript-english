@@ -8,7 +8,7 @@ For example, the following arrays could be created:
 - A 500-item floating-point array containing five hundred valued random numbers.
 
 For example, the worksheet could be visualized as follows:
-![taulukko](img/array_e.jpeg)
+![taulukko](img/taulukko.jpeg)
 
 Array's elements are referenced by the name and index of the array variable.
 
@@ -301,7 +301,7 @@ In the case of primitive variables, the value of the parameter is the value of t
 
 The figure below shows the relationship between a memory address and its contents. (The memory addresses in the illustration are examples only. Actual memory addresses are not visible to the programmer and are not relevant to programming.)
 
-![muistiosoite](img/muistiosoite.png)
+![muistiosoite](img/array_e.jpeg)
 
 When a function is called and an array is passed as a parameter, its memory address is copied. The array itself is not copied to the value of the parameter variable.
 Thus, the array variable in the function call and the internal parameter variable in the function refer to one and the same array.

@@ -8,7 +8,7 @@ For example, the following arrays could be created:
 - A 500-item floating-point array containing five hundred valued random numbers.
 
 For example, the worksheet could be visualized as follows:
-![taulukko](img/taulukko.jpeg)
+![taulukko](img/taulukko.png)
 
 Array's elements are referenced by the name and index of the array variable.
 

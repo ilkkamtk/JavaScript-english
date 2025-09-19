@@ -14,7 +14,7 @@ In JavaScript, a Conditional expression is implemented with an if clause. For ex
 
 In the conditional statement, the word `if` is followed by a logical expression inside the parentheses. In this case it is `age < 18`.
 
-The value of a logical expression is always `true` or` false`.
+The value of a logical expression is always `true` or `false`.
 
 The condition is written so that its value is true exactly when the conditional part of the program is to be executed.
 
@@ -27,7 +27,7 @@ If the condition is false, the conditional part is not executed. For example, wi
 
 Comparison operators are usually needed to express a condition in a conditional statement. The following comparison operators are used in JavaScript:
 - equal to (`==`) or (`===`) 
-- different than (`!=`)
+- different than (`!=`) or (`!==`)
 - greater than (`>`)
 - greater than or equal to (`>=`)
 - less than (`<`)
@@ -81,7 +81,7 @@ The following example indicates whether the integer entered by the user is even 
 
 ## Multi-option selection conditional expression
 
-The required number of `else if` branches is appended to the conditional structure of many mutually exclusive options. During execution, the original `if` branch is moved - or if its condition is false - the first` else-if` branch whose selection condition is met. The following program comments the age of an adult user:
+The required number of `else if` branches is appended to the conditional structure of many mutually exclusive options. During execution, the original `if` branch is moved - or if its condition is false - the first `else-if` branch whose selection condition is met. The following program comments the age of an adult user:
 ```javascript
         const age = prompt('Enter your age');
         if (age >= 65) {
@@ -141,7 +141,7 @@ The drug dose determination can be written as a JavaScript program as follows:
         }
         console.log('The dose is ' + dose + ' micrograms.');
 ```
-Notice the new `if` statement inside the` else-if` branch, which will only be executed if that branch is reached.
+Notice the new `if` statement inside the `else-if` branch, which will only be executed if that branch is reached.
 
 ## Conditional expression of listed options (switch)
 
@@ -166,17 +166,17 @@ For example, the following program asks the user for a ship's cabin class (A, B,
         }
 ```
 
-The expression following the word `switch` (here` class`) acts as a selector, the value of which determines which branch of execution
+The expression following the word `switch` (here `class`) acts as a selector, the value of which determines which branch of execution
 will end up.
 
 Each execution branch is started with the word `case`, followed by the value of the selector and a colon. After that, the statements to be executed in the branch are written, which do not need to be assembled inside the brackets. The branch ends with a `break` statement.
 
-The last `default` branch is always reached if the value of the user selector does not match the value in any of the` case` branches.
+The last `default` branch is always reached if the value of the user selector does not match the value in any of the `case` branches.
 
-Each branch (except the last `default` branch) ends with a` break` statement.
+Each branch (except the last `default` branch) ends with a `break` statement.
 The statement causes the `switch` selection structure to stop running immediately.
-Without the `break` statement, execution would continue from the statements in the` case` branch immediately below, even if the value of the selector does not match.
-Thus, if the `break` statement at the end of the branch corresponding to cabin A were deleted, the program would print two descriptions of cabin A:` Top deck cabin with window` and `Top deck cabin without window`.
+Without the `break` statement, execution would continue from the statements in the `case` branch immediately below, even if the value of the selector does not match.
+Thus, if the `break` statement at the end of the branch corresponding to cabin A were deleted, the program would print two descriptions of cabin A: `Top deck cabin with window` and `Top deck cabin without window`.
 
 # Loops
 
@@ -299,7 +299,7 @@ A problem like this can be solved with two nested loop structures:
             }
         }
 ```
-Note the use of two loop variables (`i` and` j`). In the outer loop structure, the loop variable `i` gets the value one in the first round, after which the loop variable in the inner loop structure goes through all the values from one to five.
+Note the use of two loop variables (`i` and `j`). In the outer loop structure, the loop variable `i` gets the value one in the first round, after which the loop variable in the inner loop structure goes through all the values from one to five.
 Thereafter, the loop variable of the outer loop structure increases to two, and the inner loop structure is again reviewed in its entirety. This is continued until the loop variable of the outer structure finally increases to six, at which point its loop condition has become untrue.
 
 The program produces the following output:

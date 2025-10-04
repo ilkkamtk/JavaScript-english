@@ -19,7 +19,7 @@ The value of a logical expression is always `true` or` false`.
 The condition is written so that its value is true exactly when the conditional part of the program is to be executed.
 
 The conditional part of the program, i.e. the block, is delimited in brackets and indented according to established practice. In the example, the conditional part of the program contains one statement, which is a call to the `console.log ()` method.
-If there is only one statement in the block, the parentheses are not be needed.
+If there is only one statement in the block, the curly brackets are not be needed.
 
 If the condition is false, the conditional part is not executed. For example, with input 18, program execution jumps over a conditional program section.
 

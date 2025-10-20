@@ -165,7 +165,7 @@ The variable could also be defined and initialized at the same time, which is ac
 
 Variables are loosely typed, so when defining a variable, it is not necessary to say what value is to be stored in the variable — whether it is an integer (such as 17), a floating point number (such as 21.38), or a string (such as "computer").
 
-The names of the variables are symbols invented by the programmer himself. Names can contain letters, numbers, and underscores and dollar signs. However, the variable name cannot begin with a numeric character. For example, `number2` and` kilograms` are valid variable names, but `7days` or `super-high` are not. In the names of variables, Scandinavian characters may be used. they are often avoided because there may be problems printing characters when your computer or browser has different country settings.
+The names of the variables are symbols invented by the programmer. Names can contain letters, numbers, and underscores and dollar signs. However, the variable name cannot begin with a numeric character. For example, `number2` and` kilograms` are valid variable names, but `7days` or `super-high` are not. In the names of variables, Scandinavian characters may be used, but they are often avoided because there may be problems printing characters when your computer or browser has different country settings.
 
 For example, the following program defines two variables, the first of which stores a string and the second an integer. The program then prints the values of the variables, replaces them with new values, and prints the changed values:
 ```javascript
@@ -282,7 +282,7 @@ A dialog box will appear in the browser window:
 
 In that form, however, the question is quite useless, as the name given by the user is not recovered. Thus, feeds read from the user are almost invariably stored in variables so that the read feeds can be used later in the program.
 
-The following example program asks for the user's name and greets him or her in person:
+The following example program asks for the user's name and greets them in person:
 
 ```javascript
      const name = prompt('Type your name.');

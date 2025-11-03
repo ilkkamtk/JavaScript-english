@@ -1,5 +1,10 @@
 # Assignments
 Create a folder for each module and inside each module create folder for each assignment. Create one HTML- and JavaScript file for each assignment. File names should contain the assignment's number. All HTML should be valid. Submit links that point to the module folder in users.metropolia.fi (not individual files) and to the GitHub repo of your JavaScript assignments.
+
+
+- [YouTube instructions for uploading](https://www.youtube.com/watch?v=CDXEu4piXRA&list=PLKenVLUxjmH-y89AiiI2xcXDy5QG83D4K&index=8)
+- [webdisk.metropolia.fi](https://webdisk.metropolia.fi/) can also be used to upload assignments
+
 ****
 ### Example submission:
 
@@ -16,6 +21,9 @@ Completed assignments:
 **Total 11p**
 
 ****
+
+## Read this before continuing
+
 You can choose which assignments you want to do based on your skill level. Try to do at least about 10 points worth of assignments (so at least 40%). The more points available in the assignment, the more challenging it is.
 
 

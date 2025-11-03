@@ -55,7 +55,7 @@ Logical expressions can be combined using logical operators.
 
 For example, the following program indicates if the integer entered by the user is both even and greater than 10:
 ```javascript
-const number = prompt('Enter and integer');
+const number = prompt('Enter an integer');
 if (number % 2 === 0 && number > 10) {
     console.log('You entered an even number greater than 10');
 }

@@ -352,8 +352,8 @@ Such a function may be required, for example, when you want the first click of a
 
 function A(evt){
   alert('This is function A');
-  nappi.removeEventListener('click', A);
-  nappi.addEventListener('click', B);
+  button.removeEventListener('click', A);
+  button.addEventListener('click', B);
 }
 
 function B(evt){

@@ -200,7 +200,7 @@ There are six primitive types of variables in JavaScript:
 
 In addition to the elementary types listed above, JavaScript has an object type that can contain objects of arbitrarily complex structure.
 
-The type of the variable can be tested with `typeOf`-operation:
+The type of the variable can be tested with the `typeof` operator:
 ```javascript
 const name = 'Ahmed';
 console.log(typeof name);

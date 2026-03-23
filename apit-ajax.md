@@ -31,35 +31,35 @@ For this reason, in JavaScript, many things, such as AJAX calls and file process
 
 #### Asynchronous AJAX-request
 ```javascript
-    'use strict';
-    console.log('the script starts');
+'use strict';
+console.log('the script starts');
 
-    function synchronousFunction() {
-      let number = 1;
-      for(let i = 1; i < 100000; i++){
-        number += i;
-        console.log('synchronousFunction running');
-      }
-      console.log('regular function complete', number);
+function synchronousFunction() {
+  let number = 1;
+  for(let i = 1; i < 100000; i++){
+    number += i;
+    console.log('synchronousFunction running');
+  }
+  console.log('regular function complete', number);
+}
+
+async function asynchronousFunction() {                 // asynchronous function is defined by the async keyword
+    console.log('asynchronous download begins');
+    try {                                               // error handling: try/catch/finally
+        const response = await fetch('http://127.0.0.1:3000/airport/00A');    // starting data download, fetch returns a promise which contains an object of type 'response'
+        const jsonData = await response.json();          // retrieving the data retrieved from the response object using the json() function
+        console.log(jsonData.ICAO, jsonData.Name);    // log the result to the console
+    } catch (error) {
+        console.log(error.message);
+    } finally {                                         // finally = this is executed anyway, whether the execution was successful or not
+        console.log('asynchronous load complete');
     }
+}
 
-    async function asynchronousFunction() {                 // asynchronous function is defined by the async keyword
-        console.log('asynchronous download begins');
-        try {                                               // error handling: try/catch/finally
-            const response = await fetch('http://127.0.0.1:3000/airport/00A');    // starting data download, fetch returns a promise which contains an object of type 'response'
-            const jsonData = await response.json();          // retrieving the data retrieved from the response object using the json() function
-            console.log(jsonData.ICAO, jsonData.Name);    // log the result to the console
-        } catch (error) {
-            console.log(error.message);
-        } finally {                                         // finally = this is executed anyway, whether the execution was successful or not
-            console.log('asynchronous load complete');
-        }
-    }
+synchronousFunction();
+asynchronousFunction();
 
-    synchronousFunction();
-    asynchronousFunction();
-
-    console.log('the script ends');
+console.log('the script ends');
 ```
 ##### Task: Try the script above. Use the URL of assignment 2 of Python module 13 ([Finnish](https://github.com/vesavvo/Python_Ohjelmistoteema/blob/main/Teht%C3%A4v%C3%A4t.md#13-taustapalvelun-ja-rajapinnan-rakentaminen) or [English](https://github.com/vesavvo/Python_Ohjelmistoteema/blob/main/English/Exercises.md#13-setting-up-a-backend-service-with-an-interface)).
    - First install Flask-CORS extension to your Python app. 
@@ -151,22 +151,21 @@ The example above describes an array (square brackets []) that contains two obje
 </figure>
 
 <script>
-        // simplified example without error handling
-        async function showPics() {
-            const response = await fetch('pics.json');              // starts the download.
-            const images = await response.json();                     // convert the loaded text JSON into a JavaScript object / array
-            
-            const name = images[1].name;     // the 'name' property of the second object in the 'images' array
-            const description = images[1].description; // 'description' property of the second object object in the 'images' array
-            const address = images[1].address; // 'address' property of the second object object in the 'images' array
-    
-            document.querySelector('img').src = address;
-            document.querySelector('img').alt = name;
-            document.querySelector('figcaption').innerText = description;
-            
-        }
+    // simplified example without error handling
+    async function showPics() {
+        const response = await fetch('pics.json');              // starts the download.
+        const images = await response.json();                   // convert the loaded text JSON into a JavaScript object / array
 
-        showPics(); // call function to start download
+        const name = images[1].name;     // the 'name' property of the second object in the 'images' array
+        const description = images[1].description; // 'description' property of the second object object in the 'images' array
+        const address = images[1].address; // 'address' property of the second object object in the 'images' array
+
+        document.querySelector('img').src = address;
+        document.querySelector('img').alt = name;
+        document.querySelector('figcaption').innerText = description;
+    }
+    
+    showPics(); // call function to start download
 </script>
 ```
 
@@ -177,6 +176,7 @@ A promise is an object that may produce a single value some time in the future: 
 
 In newer versions of JavaScript, promise is increasingly used instead of [callback functions](extras.md#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
 The advantages of the promise are e.g. simpler syntax and easier error handling. For example, to submit a form using the fetch method:
+
 ```html
 <form>
   <div>
@@ -217,6 +217,7 @@ document.addEventListener('submit', async function(evt) {
 });
 </script>
 ```
+
 `fetch()` and `json()` functions both return a promise. Hence, you need use the await keyword to wait for the promise to be fulfilled. In this case that means that the data has been loaded.
 
 
@@ -224,6 +225,7 @@ document.addEventListener('submit', async function(evt) {
 Fetch is a promise-based way to make Ajax applications. Compared to the original [XMLHTTPRequest object](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), Fetch is more powerful, more flexible, and simpler in larger applications because it does not have to deal with so-called callback hell and handling errors is easier. 
 
 The ES8 version of JavaScript introduced the syntax of [async / await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to simplify the use of promises and especially error handling. With Async / await syntax, functions that return a promise are handled in much the same way as any other function. The difference is that the function that returns the promise must be written inside another asynchronous (async) function. In addition, await is written in front of the function call. Here's the above example using async / await syntax, but now with [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) error handling.
+
 ```html
 <figure>
     <img>
@@ -232,7 +234,7 @@ The ES8 version of JavaScript introduced the syntax of [async / await](https://d
 
 <script>   
     async function showPics() {  
-        try{
+        try {
            const response = await fetch('pics.json');              // The download is started.
            if (!response.ok) throw new Error('Invalid input!'); // If an error occurs, an error message is thrown
            const images = await response.json();                     // convert the loaded text JSON to a JavaScript object / array

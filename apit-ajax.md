@@ -174,7 +174,7 @@ The example above describes an array (square brackets []) that contains two obje
 A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
 ![Promise flowchart](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png)
 
-In newer versions of JavaScript, promise is increasingly used instead of [callback functions](extras.md#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return value.
+In newer versions of JavaScript, promise is increasingly used instead of [callback functions](extras.md#callback-functions-and-callback-hell). A promise is an object that ‘promises’ to return a value.
 The advantages of the promise are e.g. simpler syntax and easier error handling. For example, to submit a form using the fetch method:
 
 ```html

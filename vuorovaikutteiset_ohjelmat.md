@@ -72,7 +72,7 @@ The console log is generated using the `console.log ()` method.
 The log output is usually displayed on the Console tab in the browser's developer tools.
 
 ```javascript
-        console.log('Howdy partner!');
+console.log('Howdy partner!');
 ```
 
 Output in the console window:
@@ -85,7 +85,7 @@ Howdy partner!
 
 A pop-up message window is generated with the [`alert`](BOM-DOM-event.md#alert-metodi)-function:
 ```javascript
-        alert('Hi from here too!');
+alert('Hi from here too!');
 ```
 
 The alert window that appears in the browser looks like this:
@@ -147,20 +147,20 @@ These programming language structures are discussed later; at this point, it is 
 
 For example, a variable called `name` is defined as follows:
 ```javascript
-        let name;
+let name;
 ```
 At this point, the variable is defined, that is, from the program point of view it exists: a value can be set for it and its value can be read.
 The value can be set and read any number of times; however, the value of a variable can only be read after the variable has been initialized, ie it has been set to a value for the first time.
 
 The above variable can be initialized as follows:
 ```javascript
-        name = 'Myles';
+name = 'Myles';
 ```
 
 
 The variable could also be defined and initialized at the same time, which is actually more common:
 ```javascript
-        const name = 'Myles';
+const name = 'Myles';
 ```
 
 Variables are loosely typed, so when defining a variable, it is not necessary to say what value is to be stored in the variable — whether it is an integer (such as 17), a floating point number (such as 21.38), or a string (such as "computer").
@@ -169,15 +169,15 @@ The names of the variables are symbols invented by the programmer. Names can con
 
 For example, the following program defines two variables, the first of which stores a string and the second an integer. The program then prints the values of the variables, replaces them with new values, and prints the changed values:
 ```javascript
-        let number, name;
-        number = 153;
-        name = 'Anna';
-        console.log(number);
-        console.log(name);
-        number = -17;
-        name = 'Pekka';
-        console.log(number);
-        console.log(name);
+let number, name;
+number = 153;
+name = 'Anna';
+console.log(number);
+console.log(name);
+number = -17;
+name = 'Pekka';
+console.log(number);
+console.log(name);
 ```
 
 Output produced by the program:
@@ -200,10 +200,10 @@ There are six primitive types of variables in JavaScript:
 
 In addition to the elementary types listed above, JavaScript has an object type that can contain objects of arbitrarily complex structure.
 
-The type of the variable can be tested with `typeOf`-operation:
+The type of the variable can be tested with the `typeof` operator:
 ```javascript
-        const name = 'Ahmed';
-        console.log(typeof name);
+const name = 'Ahmed';
+console.log(typeof name);
  ```
 The program prints out "string".
  
@@ -211,16 +211,16 @@ The program prints out "string".
 
 A numeric variable can be converted to a string using the `toString` method:
 ```javascript
-        const age = 23;
-        const ageStr = age.toString();
+const age = 23;
+const ageStr = age.toString();
 ```
 The conversion in the other direction can be done with the parseInt or parseFloat method:
 ```javascript
-        const ageStr = '23';
-        const moneyStr= '15.48';
-        
-        const age = parseInt(ageStr);
-        const money = parseFloat(moneyStr);
+const ageStr = '23';
+const moneyStr= '15.48';
+
+const age = parseInt(ageStr);
+const money = parseFloat(moneyStr);
 ```
 The conversion can also be done with the unary `+` operation:
 ```javascript
@@ -233,7 +233,7 @@ The conversion can also be done with the unary `+` operation:
 String concatenation is performed with the `+` operation.
 For example, the following statement constructs an output of three substrings:
 ```javascript
-        console.log('Good' + ' morning' + ' all.');
+console.log('Good' + ' morning' + ' all.');
 ```
 
 Printout:
@@ -244,12 +244,12 @@ Good morning all.
 Alternatively, the substrings and the concatenated string could be stored in the variables and the value of the variable containing the concatenated string printed:
 
 ```javascript
-        let first, second, third, all;
-        first = 'Good ';
-        second = 'morning ';
-        third = 'all.';
-        all = first + second + third;
-        console.log(all);
+let first, second, third, all;
+first = 'Good ';
+second = 'morning ';
+third = 'all.';
+all = first + second + third;
+console.log(all);
 ```       
 
 ## Template strings (Template literals)
@@ -273,7 +273,7 @@ The input is read by the [`prompt ()`](BOM-DOM-event.md#prompt-method) function.
 The following sentence asks the user for this name:
 
 ```javascript
-     prompt('Type your name.');
+ prompt('Type your name.');
 ```
 
 A dialog box will appear in the browser window:
@@ -285,8 +285,8 @@ In that form, however, the question is quite useless, as the name given by the u
 The following example program asks for the user's name and greets them in person:
 
 ```javascript
-     const name = prompt('Type your name.');
-     console.log('Noice to meet you, ' + name);
+const name = prompt('Type your name.');
+console.log('Noice to meet you, ' + name);
 ```
 
 ## Mathematical operations
@@ -304,20 +304,20 @@ The basic JavaScript calculations are:
 - modulo (`%`)
 
 ```javascript
-        let number = 3;
-        number = number * 7;     // the value is now 21
-        number = 1 + number/2;   // the value is now 11.5
-        console.log(number);
+let number = 3;
+number = number * 7;     // the value is now 21
+number = 1 + number/2;   // the value is now 11.5
+console.log(number);
 ```
 The following operations can be used to change the value of a variable by one:
 - add by one (`++`)
 - subtract by one (`--`)
 
 ```javascript
-        let number = 3;
-        number++;     // the value is now 4
-        number--;     // the value is again 3
-        console.log(number);
+let number = 3;
+number++;     // the value is now 4
+number--;     // the value is again 3
+console.log(number);
 ```
 
 
@@ -328,12 +328,12 @@ You can also change the value more at once:
 - division by constant (`/=`)
 
 ```javascript
-        let number = 3;
-        number *= 2;    // the value is now 6
-        number /= 3;    // the value is now 2
-        number += 7;   // the value is now 9
-        number -= 8;    // the value is now 1
-        console.log(number);
+let number = 3;
+number *= 2;    // the value is now 6
+number /= 3;    // the value is now 2
+number += 7;   // the value is now 9
+number -= 8;    // the value is now 1
+console.log(number);
 ```
 
 
@@ -341,8 +341,8 @@ You can also change the value more at once:
 
 Many mathematical operations - such as calculating a cosine or taking the square root - are performed using mathematical methods using the `Math` object. For example, the following program prints the square root of a number 3 (`Math.sqrt`) and a random number (`Math.random`) between zero and one:
 ```javascript
-        console.log(Math.sqrt(3));
-        console.log(Math.random());
+console.log(Math.sqrt(3));
+console.log(Math.random());
 ```
 
 There is no need to memorize the methods provided by the Math object.When you type code in the IDE (for example, WebStorm) and enter the word `Math` after typing a period, the IDE provides a list of available methods and constants. You can also see from the list what arguments must be given for each of the methods; for example, the square root method `sqrt` requires an argument to be rooted, while the random method does not require arguments,
@@ -353,9 +353,9 @@ JavaScript programs run by default in the so-called in sloppy mode, where it is 
 
 For example, the following program could run seemingly successfully:
 ```javascript
-        let diameter = 0;
-        diametr = 2340;
-        console.log('The diameter is : ' + diameter);
+let diameter = 0;
+diametr = 2340;
+console.log('The diameter is : ' + diameter);
 ```
 
 However, the program prints zero as the diameter; this is due to a typo in the variable name by the programmer.
@@ -367,7 +367,7 @@ Situations such as those described create semantic errors that are difficult to 
 Therefore, the automatic creation of undefined global variables should be prevented. This can be done by adding a `use strict` statement to the beginning of the program, which is written in quotation marks as below:
 
  ```javascript
-         'use strict';
+ 'use strict';
  ```
 
 As a result, the program is executed in strict mode.
@@ -399,3 +399,62 @@ The use of designated constant `multiplier` in strict mode ensures that the corr
 
 ### The use of designated constants in JavaScript vs other languages
 Unlike many other languages, JavaScript tends to present almost all variables as named constants. So make it a habit to use the `const` keyword every time you create a new variable. You only need the `let` keyword when the value of a variable needs to be changed later in the program.
+
+## A bit about block scopes
+
+### **`let` and `const` (BLOCK scope)**
+
+Think of **block scope** like a *fence around a tiny area of code*.
+A block is anything inside `{ ... }` — for example:
+
+```js
+if (...) { ... }
+for (...) { ... }
+function (...) { ... }
+```
+
+If you declare something with **let** or **const** *inside a block*, it **cannot be seen outside that block**.
+
+#### Example
+
+```js
+if (true) {
+    let a = 10;
+    const b = 20;
+}
+
+console.log(a); // ❌ error
+console.log(b); // ❌ error
+```
+
+`a` and `b` live **only inside the braces `{ }`**.
+
+---
+
+### **`var` (FUNCTION scope)**
+
+`var` ignores the small block fences.
+The only “fence” it respects is a **function**.
+
+So if you declare a `var` inside an `if` or `for` block, it *escapes* and can still be used outside.
+
+#### Example
+
+```js
+if (true) {
+    var x = 30;
+}
+
+console.log(x); // ✅ works
+```
+
+This is because `var` sees only the **function** around it — and here there is none, so it lives in the whole file.
+
+But inside a function, it *does* stay inside that function:
+
+```js
+function test() {
+    var y = 40;
+}
+console.log(y); // ❌ error (function boundary stops it)
+```

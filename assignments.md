@@ -3,7 +3,7 @@ Create a folder for each module and inside each module create folder for each as
 
 
 - [YouTube instructions for uploading](https://www.youtube.com/watch?v=CDXEu4piXRA&list=PLKenVLUxjmH-y89AiiI2xcXDy5QG83D4K&index=8)
-- [webdisk.metropolia.fi](https://webdisk.metropolia.fi/) can also be used to upload assignments
+- [webdisk.metropolia.fi](https://webdisk.metropolia.fi/) preferred way to upload assignments
 
 ****
 ### Example submission:
